@@ -43,3 +43,7 @@ _ReSharper*/
 
 # Ignore Nuget packages folder
 packages/
+
+.vscode/
+*.code-workspace
+omnisharp.json

@@ -1,0 +1,3 @@
+[submodule "Plugins/DigiTalino"]
+	path = Plugins/DigiTalino
+	url = https://github.com/alcoranpaul/DigiTalino_plugin.git
