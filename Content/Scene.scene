@@ -24,6 +24,12 @@
 			"V": {}
 		},
 		{
+			"ID": "c49ff7ba4b8fa7751a47a9a401a0548e",
+			"TypeName": "DigiTalino_Plugin.SceneAnimationManager",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {}
+		},
+		{
 			"ID": "c9ad75204dea324c3e8185ae44baac5f",
 			"TypeName": "FlaxEngine.UICanvas",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -702,6 +708,19 @@
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "ButtonPanel"
+		},
+		{
+			"ID": "b20961734922d145362254a2773efd08",
+			"TypeName": "Game.ButtonPanel",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
+			"V": {
+	"_openButton": "24ac03c24521ec0c357dfda3e5dbe2ec",
+	"_closeButton": "32c89cfc4067e4caf3f909879196b3fb",
+	"_goUpButton": "9b3cbd3b46d33a3185a3c69b22b4d82e",
+	"_goDownButton": "9e06951049cc36843cced1bfea3a814a",
+	"_elevatorOpen": "e89a323e456d1f255f2e0eaeec7024aa",
+	"_elevatorClose": "f07d744f4a8155b4162c358ae9b21780"
+}
 		},
 		{
 			"ID": "4f20e44f41bfebef91e0a6aeceed38f6",
