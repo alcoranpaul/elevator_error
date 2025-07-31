@@ -18,6 +18,12 @@
 			}
 		},
 		{
+			"ID": "753c9c44416cf812f613e19d6c999ffc",
+			"TypeName": "DigiTalino_Plugin.InputManager",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {}
+		},
+		{
 			"ID": "28553d634087c67c711ebd96080482aa",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -92,70 +98,6 @@
 			},
 			"BakedProbe": "1c0e10484ff57d402275289550564b9f",
 			"Mode": 0
-		},
-		{
-			"ID": "35750a99431e0c788ca3aa9db6d58dcd",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "SK_Chr_Cleaner_Female_01",
-			"Transform": {
-				"Translation": {
-					"X": 15.43267822265625,
-					"Y": 1.0288314819335938,
-					"Z": -85.11445617675781
-				}
-			},
-			"SkinnedModel": "c898182a493aa3a8037925abd7353e85",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "d9f217fb4eef7e6e9d9d2ab3348cf9be",
-			"TypeName": "FlaxEngine.BoneSocket",
-			"ParentID": "35750a99431e0c788ca3aa9db6d58dcd",
-			"Name": "BoneSocket",
-			"Transform": {
-				"Translation": {
-					"X": -6.7310975282453e-7,
-					"Y": 156.9112548828125,
-					"Z": -0.48395371437072754
-				},
-				"Orientation": {
-					"X": 3.927058855879295e-8,
-					"Y": 1.0,
-					"Z": 2.235175244891252e-8,
-					"W": -5.7955020338340546e-8
-				}
-			},
-			"Node": "head"
-		},
-		{
-			"ID": "b0d72c3746caebca055e1f921ca21c7c",
-			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "d9f217fb4eef7e6e9d9d2ab3348cf9be",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": 0.0000020195952856738586,
-					"Y": 11.32305908203125,
-					"Z": -9.75125789642334
-				},
-				"Orientation": {
-					"X": -5.471179065352771e-13,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			},
-			"StaticFlags": 0
 		},
 		{
 			"ID": "98fb0c604661f037bc1525b60d2e2ceb",
@@ -381,6 +323,95 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "PlayerController",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "db54c7c1420e7862061935ab251f9e3c",
+			"TypeName": "DigiTalino_Plugin.PlayerController",
+			"ParentID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
+			"V": {
+	"_pawnPossessionArgs": {
+		"FPSPawn": "2416025f4bddb296b724ac962539c751"
+	}
+}
+		},
+		{
+			"ID": "ccc3279144f0c86b927ab6b14f517dd1",
+			"TypeName": "FlaxEngine.CharacterController",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "FPSPawn",
+			"StaticFlags": 0,
+			"Center": {
+				"X": 0.0,
+				"Y": 87.0,
+				"Z": 0.0
+			},
+			"Radius": 25.0,
+			"Height": 125.0
+		},
+		{
+			"ID": "2416025f4bddb296b724ac962539c751",
+			"TypeName": "DigiTalino_Plugin.FPSPawn",
+			"ParentID": "ccc3279144f0c86b927ab6b14f517dd1",
+			"V": {
+	"_mouseSensitivity": 0.047507424,
+	"_movementSpeed": 350.0,
+	"_name": "First Person Pawn",
+	"_camera": "1a0d66964effe0de552acbab6cc6a417"
+}
+		},
+		{
+			"ID": "ca5960254358279ab00f4cbe275c888b",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "ccc3279144f0c86b927ab6b14f517dd1",
+			"IsActive": false,
+			"Name": "SK_Chr_Cleaner_Female_01",
+			"StaticFlags": 0,
+			"SkinnedModel": "c898182a493aa3a8037925abd7353e85",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "74d9b4f44fce9c5398dae5872cbdb7db",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "ccc3279144f0c86b927ab6b14f517dd1",
+			"Name": "SpringArm",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 160.0,
+					"Z": 0.0
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "1a0d66964effe0de552acbab6cc6a417",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "74d9b4f44fce9c5398dae5872cbdb7db",
+			"Name": "Camera",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "a092fb774d26aab88c1b7392232c3f8f",
+			"TypeName": "FlaxEngine.AudioListener",
+			"ParentID": "1a0d66964effe0de552acbab6cc6a417",
+			"Name": "Audio Listener",
+			"StaticFlags": 0
 		}
 	]
 }
