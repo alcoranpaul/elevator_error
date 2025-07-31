@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "Game": {
+      "commandName": "Executable",
+      "workingDirectory": "E:/Projects/Game Dev/Flax/elevator_error",
+      "executablePath": "E:/Game Development/Flax/Flax_1.10/Binaries/Editor/Win64/Development/FlaxEditor.exe",
+      "commandLineArgs": "-project \"E:/Projects/Game Dev/Flax/elevator_error\"",
+      "nativeDebugging": false
+    }
+  }
+}

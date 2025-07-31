@@ -1,7 +1,7 @@
 {
 	"ID": "74a68a984824b4510d12589f199ad68f",
 	"TypeName": "FlaxEngine.SceneAsset",
-	"EngineBuild": 6333,
+	"EngineBuild": 6705,
 	"Data": [
 		{
 			"ID": "74a68a984824b4510d12589f199ad68f",
@@ -16,12 +16,6 @@
 				"UseGeometryWithNoMaterials": true,
 				"Quality": 100
 			}
-		},
-		{
-			"ID": "6ff0581d474c84230b3d0fa9f17e0972",
-			"TypeName": "ExitOnEsc",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {}
 		},
 		{
 			"ID": "28553d634087c67c711ebd96080482aa",
@@ -62,18 +56,19 @@
 			"ID": "deecf0894777293a4f478dadacf2a6f8",
 			"TypeName": "FlaxEngine.DirectionalLight",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "Directional Light",
 			"Transform": {
 				"Translation": {
-					"X": -1.6893305778503419,
+					"X": -1.6893305778503418,
 					"Y": 267.7931823730469,
 					"Z": 0.0
 				},
 				"Orientation": {
-					"X": 0.5176515579223633,
-					"Y": 0.0833025798201561,
-					"Z": 0.06534233689308167,
-					"W": 0.8490158915519714
+					"X": 0.6495919823646545,
+					"Y": 0.03388093411922455,
+					"Z": 0.015364810824394226,
+					"W": 0.7593722343444824
 				}
 			},
 			"Color": {
@@ -99,48 +94,22 @@
 			"Mode": 0
 		},
 		{
-			"ID": "b0d72c3746caebca055e1f921ca21c7c",
-			"TypeName": "FlaxEngine.Camera",
+			"ID": "35750a99431e0c788ca3aa9db6d58dcd",
+			"TypeName": "FlaxEngine.AnimatedModel",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Camera",
+			"Name": "SK_Chr_Cleaner_Female_01",
 			"Transform": {
 				"Translation": {
-					"X": -198.75326538085938,
-					"Y": 196.89071655273438,
-					"Z": 190.70037841796876
-				},
-				"Orientation": {
-					"X": 0.06189095228910446,
-					"Y": 0.9198267459869385,
-					"Z": -0.1617070734500885,
-					"W": 0.35204988718032839
+					"X": 15.43267822265625,
+					"Y": 1.0288314819335938,
+					"Z": -85.11445617675781
 				}
 			},
-			"StaticFlags": 0
-		},
-		{
-			"ID": "9053ad38428b10594c741db78d7fcca5",
-			"TypeName": "FreeCamera",
-			"ParentID": "b0d72c3746caebca055e1f921ca21c7c",
-			"V": {}
-		},
-		{
-			"ID": "4a9d87134ab42f4294db6bbcf1902bde",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Floor",
-			"Transform": {
-				"Scale": {
-					"X": 10.0,
-					"Y": 0.5,
-					"Z": 10.0
-				}
-			},
-			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"SkinnedModel": "c898182a493aa3a8037925abd7353e85",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -149,26 +118,180 @@
 			}
 		},
 		{
-			"ID": "4a7045e748c74e3de29afd8856f99205",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "4a9d87134ab42f4294db6bbcf1902bde",
-			"Name": "BoxCollider"
-		},
-		{
-			"ID": "e1c92bcc4eb069c29f0a5e9c605ec5ef",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Cube",
+			"ID": "d9f217fb4eef7e6e9d9d2ab3348cf9be",
+			"TypeName": "FlaxEngine.BoneSocket",
+			"ParentID": "35750a99431e0c788ca3aa9db6d58dcd",
+			"Name": "BoneSocket",
 			"Transform": {
 				"Translation": {
-					"X": 6.8406219482421879,
-					"Y": 61.59697723388672,
-					"Z": -84.26880645751953
+					"X": -6.7310975282453e-7,
+					"Y": 156.9112548828125,
+					"Z": -0.48395371437072754
+				},
+				"Orientation": {
+					"X": 3.927058855879295e-8,
+					"Y": 1.0,
+					"Z": 2.235175244891252e-8,
+					"W": -5.7955020338340546e-8
 				}
 			},
-			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Node": "head"
+		},
+		{
+			"ID": "b0d72c3746caebca055e1f921ca21c7c",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "d9f217fb4eef7e6e9d9d2ab3348cf9be",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0000020195952856738586,
+					"Y": 11.32305908203125,
+					"Z": -9.75125789642334
+				},
+				"Orientation": {
+					"X": -5.471179065352771e-13,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "98fb0c604661f037bc1525b60d2e2ceb",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "map UpButton.002",
+			"Model": "d9c295384b0ac0bdc9f16999fb8ee1eb",
 			"Buffer": {
 				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "b82fdced42090079fed2f9ac98b166d3",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Map"
+		},
+		{
+			"ID": "4f20e44f41bfebef91e0a6aeceed38f6",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map",
+			"Model": "57f48a1b414d04bddd2570a3e6ab1f24",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ab2f0b8a4aaf9fefac1bcfa573a1bf02",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map DoorLeft",
+			"Model": "f78f87a94da876399fe07da1db84d0ab",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "54bb4e3a474c28475e77208126085089",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map DoorRight",
+			"Model": "16b9f5b7427c817f2ad076b83dec2447",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "6ec5c53545645f4a96bcf0ba5fabc602",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map DownButton",
+			"Model": "25fb54714d58b6012e7967a1a3f874c7",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "acf13b7b4c1603ca64ae4ea11809b70c",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map Elevator",
+			"Model": "eff435fb4d3a94967409058b30580509",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "8391b6da40053a988a0959ab9f26f700",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
 					{
 						"Material": "8391b6da40053a988a0959ab9f26f700",
 						"ShadowsMode": 3,
@@ -179,10 +302,85 @@
 			}
 		},
 		{
-			"ID": "f05185004d85b1695fc5b1ae710ba373",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "e1c92bcc4eb069c29f0a5e9c605ec5ef",
-			"Name": "BoxCollider"
+			"ID": "ca43dee04a0c0591ef98239e7385e121",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map FloorLevel",
+			"Model": "34b2ca964aee512d2a8d8bae7d0e4757",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "5a26c70f4c07c388df0fe5be71dfd251",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map UpButton",
+			"Model": "d73ead9b47aa062fd77ba98fa0791956",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "1477736a49f3c875491597871668b9d3",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "map UpButton.001",
+			"Model": "3e959b7c473a1433a86fda9f6ebe4a5e",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
 		}
 	]
 }
