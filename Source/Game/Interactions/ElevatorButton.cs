@@ -8,7 +8,7 @@ namespace Game;
 /// <summary>
 /// AElevatorButton Script.
 /// </summary>
-public class AElevatorButton : AInteraction
+public class ElevatorButton : AInteraction
 {
 
     protected override void OnInteract(Actor interactor)

@@ -152,7 +152,7 @@
 			"Name": "InteractionControl",
 			"Transform": {
 				"Translation": {
-					"X": 710.0,
+					"X": 460.0,
 					"Y": 440.0,
 					"Z": 0.0
 				}
@@ -170,8 +170,8 @@
 		"Y": 0.5
 	},
 	"Offsets": {
-		"Left": -250.0,
-		"Right": 500.0,
+		"Left": -500.0,
+		"Right": 1000.0,
 		"Top": -100.0,
 		"Bottom": 200.0
 	},
@@ -210,10 +210,98 @@
 }
 		},
 		{
+			"ID": "7e20c83e4783286d56efbea645dbd23a",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "7e45edd949ec79c6b467aeb97a718e62",
+			"Name": "Image",
+			"Transform": {
+				"Translation": {
+					"X": 497.5,
+					"Y": 97.49998474121094,
+					"Z": 0.0
+				}
+			},
+			"Control": "FlaxEngine.GUI.Image",
+			"Data": {
+	"Brush": {
+		"$type": "FlaxEngine.GUI.SolidColorBrush, FlaxEngine.CSharp",
+		"Color": {
+			"R": 1.0,
+			"G": 1.0,
+			"B": 1.0,
+			"A": 1.0
+		}
+	},
+	"Margin": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Color": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"MouseOverColor": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"DisabledTint": {
+		"R": 0.5019608,
+		"G": 0.5019608,
+		"B": 0.5019608,
+		"A": 1.0
+	},
+	"KeepAspectRatio": true,
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"AnchorMax": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Offsets": {
+		"Left": -2.5,
+		"Right": 5.0,
+		"Top": -2.5,
+		"Bottom": 5.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
 			"ID": "96a3f3d84961edc014b94d96218452e3",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "7e45edd949ec79c6b467aeb97a718e62",
-			"IsActive": false,
 			"Name": "Content",
 			"Control": "FlaxEngine.GUI.ContainerControl",
 			"Data": {
@@ -259,20 +347,109 @@
 }
 		},
 		{
+			"ID": "85f117084cb15746ffb6caae0b6e8dc0",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "96a3f3d84961edc014b94d96218452e3",
+			"Name": "Image 0",
+			"Transform": {
+				"Translation": {
+					"X": 495.0,
+					"Y": 95.0,
+					"Z": 0.0
+				}
+			},
+			"Control": "FlaxEngine.GUI.Image",
+			"Data": {
+	"Brush": {
+		"$type": "FlaxEngine.GUI.SolidColorBrush, FlaxEngine.CSharp",
+		"Color": {
+			"R": 1.0,
+			"G": 1.0,
+			"B": 1.0,
+			"A": 1.0
+		}
+	},
+	"Margin": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Color": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"MouseOverColor": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"DisabledTint": {
+		"R": 0.5019608,
+		"G": 0.5019608,
+		"B": 0.5019608,
+		"A": 1.0
+	},
+	"KeepAspectRatio": true,
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"AnchorMax": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Offsets": {
+		"Left": -5.0,
+		"Right": 10.0,
+		"Top": -5.0,
+		"Bottom": 10.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
 			"ID": "0f030ffe499fce4f732fcab52c6bdae3",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "96a3f3d84961edc014b94d96218452e3",
 			"Name": "Label",
 			"Transform": {
 				"Translation": {
-					"X": 269.99993896484375,
-					"Y": 75.0000228881836,
+					"X": 550.0,
+					"Y": 48.0,
 					"Z": -7.275957614183426e-12
 				}
 			},
 			"Control": "FlaxEngine.GUI.Label",
 			"Data": {
-	"Text": "Button",
+	"Text": "Open Elevator Door",
 	"CaseOption": 0,
 	"Bold": false,
 	"Italic": false,
@@ -290,7 +467,7 @@
 	},
 	"HorizontalAlignment": 1,
 	"VerticalAlignment": 1,
-	"Wrapping": 0,
+	"Wrapping": 1,
 	"BaseLinesGapScale": 1.0,
 	"Font": {
 		"Font": "4508d98f4aa1f0bd59362b81d47e38f4",
@@ -308,8 +485,8 @@
 	"AutoHeight": false,
 	"AutoFitText": true,
 	"AutoFitTextRange": {
-		"X": 0.1,
-		"Y": 0.2
+		"X": 0.25,
+		"Y": 0.25
 	},
 	"ClipChildren": true,
 	"CullChildren": true,
@@ -322,10 +499,10 @@
 		"Y": 0.5
 	},
 	"Offsets": {
-		"Left": -230.0,
-		"Right": 230.0,
-		"Top": -25.0,
-		"Bottom": 50.0
+		"Left": -450.0,
+		"Right": 450.0,
+		"Top": -52.0,
+		"Bottom": 104.0
 	},
 	"Scale": {
 		"X": 1.0,
@@ -429,56 +606,10 @@
 			"Mode": 0
 		},
 		{
-			"ID": "98fb0c604661f037bc1525b60d2e2ceb",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "map UpButton.002",
-			"Model": "d9c295384b0ac0bdc9f16999fb8ee1eb",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
 			"ID": "b82fdced42090079fed2f9ac98b166d3",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "Map"
-		},
-		{
-			"ID": "4f20e44f41bfebef91e0a6aeceed38f6",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
-			"Name": "map",
-			"Model": "57f48a1b414d04bddd2570a3e6ab1f24",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
 		},
 		{
 			"ID": "ab2f0b8a4aaf9fefac1bcfa573a1bf02",
@@ -507,35 +638,6 @@
 				"Entries": [
 					{
 						"Material": "0076fda9417cb4760b013abc692463bd",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "6ec5c53545645f4a96bcf0ba5fabc602",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
-			"Name": "map DownButton",
-			"Model": "25fb54714d58b6012e7967a1a3f874c7",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -596,10 +698,91 @@
 			}
 		},
 		{
+			"ID": "68524fc6445198740bcfa5a23a58b59f",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "ButtonPanel"
+		},
+		{
+			"ID": "4f20e44f41bfebef91e0a6aeceed38f6",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
+			"Name": "map",
+			"Model": "57f48a1b414d04bddd2570a3e6ab1f24",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "6ec5c53545645f4a96bcf0ba5fabc602",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
+			"Name": "map DownButton",
+			"StaticFlags": 0,
+			"Model": "25fb54714d58b6012e7967a1a3f874c7",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "9e06951049cc36843cced1bfea3a814a",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "6ec5c53545645f4a96bcf0ba5fabc602",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": 90.0,
+				"Y": 112.94845581054688,
+				"Z": 147.9845428466797
+			},
+			"Size": {
+				"X": 9.999992370605469,
+				"Y": 9.999992370605469,
+				"Z": 5.69293212890625
+			}
+		},
+		{
+			"ID": "f9a3ff4b4048e90737a9d1bb3b13834b",
+			"TypeName": "Game.ElevatorButton",
+			"ParentID": "9e06951049cc36843cced1bfea3a814a",
+			"V": {
+	"_name": "Go Down",
+	"_collider": "9e06951049cc36843cced1bfea3a814a"
+}
+		},
+		{
 			"ID": "5a26c70f4c07c388df0fe5be71dfd251",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map UpButton",
+			"StaticFlags": 0,
 			"Model": "d73ead9b47aa062fd77ba98fa0791956",
 			"Buffer": {
 				"Entries": [
@@ -643,8 +826,8 @@
 			}
 		},
 		{
-			"ID": "0eadf9b94fbbde2714b9698849dc6a49",
-			"TypeName": "Game.AElevatorButton",
+			"ID": "4f8121db45589979630856b90357c39c",
+			"TypeName": "Game.ElevatorButton",
 			"ParentID": "9b3cbd3b46d33a3185a3c69b22b4d82e",
 			"V": {
 	"_name": "Go Up",
@@ -654,8 +837,9 @@
 		{
 			"ID": "1477736a49f3c875491597871668b9d3",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map UpButton.001",
+			"StaticFlags": 0,
 			"Model": "3e959b7c473a1433a86fda9f6ebe4a5e",
 			"Buffer": {
 				"Entries": [
@@ -679,6 +863,90 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "24ac03c24521ec0c357dfda3e5dbe2ec",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "1477736a49f3c875491597871668b9d3",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": 105.79368591308594,
+				"Y": 135.71847534179688,
+				"Z": 147.98268127441406
+			},
+			"Size": {
+				"X": 9.999992370605469,
+				"Y": 10.0,
+				"Z": 5.6966552734375
+			}
+		},
+		{
+			"ID": "eded3409473617c0aa1214ab90aa2eee",
+			"TypeName": "Game.ElevatorButton",
+			"ParentID": "24ac03c24521ec0c357dfda3e5dbe2ec",
+			"V": {
+	"_name": "Open Elevator Door",
+	"_collider": "24ac03c24521ec0c357dfda3e5dbe2ec"
+}
+		},
+		{
+			"ID": "98fb0c604661f037bc1525b60d2e2ceb",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
+			"Name": "map UpButton.002",
+			"StaticFlags": 0,
+			"Model": "d9c295384b0ac0bdc9f16999fb8ee1eb",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "0076fda9417cb4760b013abc692463bd",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "32c89cfc4067e4caf3f909879196b3fb",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "98fb0c604661f037bc1525b60d2e2ceb",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": 105.79368591308594,
+				"Y": 112.94845581054688,
+				"Z": 148.07505798339844
+			},
+			"Size": {
+				"X": 9.999992370605469,
+				"Y": 9.999992370605469,
+				"Z": 5.51190185546875
+			}
+		},
+		{
+			"ID": "eb58820444feb9a1d8d904add3859e56",
+			"TypeName": "Game.ElevatorButton",
+			"ParentID": "32c89cfc4067e4caf3f909879196b3fb",
+			"V": {
+	"_name": "Close Elevator Door",
+	"_collider": "32c89cfc4067e4caf3f909879196b3fb"
+}
 		},
 		{
 			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
@@ -717,7 +985,7 @@
 			"ParentID": "ccc3279144f0c86b927ab6b14f517dd1",
 			"V": {
 	"_cameraComponentArgs": {
-		"MouseSensitivity": 0.05,
+		"MouseSensitivity": 0.03,
 		"Camera": "1a0d66964effe0de552acbab6cc6a417"
 	},
 	"_movementComponentArgs": {
