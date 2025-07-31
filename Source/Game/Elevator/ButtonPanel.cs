@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using DigiTalino_Plugin;
 using FlaxEngine;
-using FlaxEngine.Utilities;
+using static DigiTalino_Plugin.Easing;
 
 namespace Game;
 
@@ -11,6 +10,7 @@ namespace Game;
 /// </summary>
 public class ButtonPanel : Script
 {
+    [ShowInEditor, Serialize] private Actor _elevatorActor;
     [ShowInEditor, Serialize] private Actor _openButton;
     [ShowInEditor, Serialize] private Actor _closeButton;
     [ShowInEditor, Serialize] private Actor _goUpButton;
@@ -20,29 +20,97 @@ public class ButtonPanel : Script
     [ShowInEditor, Serialize] private SceneAnimation _elevatorClose;
     [ShowInEditor, Serialize] private SceneAnimation _buttonPress;
 
+    [ShowInEditor, Serialize] private AudioClip _buttonPressSound;
 
+    [ShowInEditor, Serialize] private float transitionDuration = 5f;
+
+    // Button Interactions
     private IInteract _openButtonInteract;
     private IInteract _closeButtonInteract;
     private IInteract _goUpButtonInteract;
     private IInteract _goDownButtonInteract;
 
-    private State _state;
-    private DoorState _doorState;
+
+    // Button Panel State
+    private State _state = State.Idle;
+    private DoorState _doorState = DoorState.Closed;
+
+    // Elevator Vibration
+    private Vector3 _originalPosition;
+    private float _vibrationTime = 0f;
+    [ShowInEditor, Serialize] private float _vibrationIntensity = 50f; // tweak as needed
+    [ShowInEditor, Serialize] private float _vibrationFrequency = 20f; // tweak as needed
+    private bool _isVibrating = false;
+
+    [ShowInEditor, Serialize] private TransitionType _easingType = TransitionType.EaseOutSine;
 
     public override void OnAwake()
     {
         InitializeButtons();
+        SubscribeButtonEvents();
+    }
 
-        _state = State.Idle;
-        _doorState = DoorState.Closed;
+    public override void OnDisable()
+    {
+        UnsubscribeButtonEvents();
+    }
+
+    public override void OnUpdate()
+    {
+        if (_isVibrating && _elevatorActor != null)
+        {
+            _vibrationTime += Time.DeltaTime;
+            float remainingTime = transitionDuration - _vibrationTime;
+
+            // Determine easing factor only in the last second
+            float easeFactor = remainingTime <= 1f
+                ? Apply(_easingType, Mathf.Clamp(remainingTime, 0f, 1f))
+                : 1f;
+
+            float currentIntensity = _vibrationIntensity * easeFactor * 0.001f;
+            float currentFrequency = _vibrationFrequency * easeFactor;
+
+            float offsetX = Mathf.Sin(_vibrationTime * currentFrequency) * currentIntensity;
+            float offsetY = Mathf.Cos(_vibrationTime * currentFrequency * 0.8f) * currentIntensity;
+            float offsetZ = Mathf.Sin(_vibrationTime * currentFrequency * 1.2f) * currentIntensity;
+
+            _elevatorActor.LocalPosition = _originalPosition + new Vector3(offsetX, offsetY, offsetZ);
+
+            if (_vibrationTime >= transitionDuration)
+            {
+                StopElevatorVibration();
+                SwitchToIdle();
+                OnOpenButtonInteracted(null);
+
+            }
+        }
+    }
+
+
+    private void InitializeButtons()
+    {
+        _openButtonInteract = GetInteractOrThrow(_openButton, nameof(_openButton));
+        _closeButtonInteract = GetInteractOrThrow(_closeButton, nameof(_closeButton));
+        _goUpButtonInteract = GetInteractOrThrow(_goUpButton, nameof(_goUpButton));
+        _goDownButtonInteract = GetInteractOrThrow(_goDownButton, nameof(_goDownButton));
+    }
+
+    private static IInteract GetInteractOrThrow(Actor actor, string name)
+    {
+        if (actor == null || !actor.TryGetScript(out IInteract interact))
+            throw new Exception($"{name} is null or missing IInteract script.");
+        return interact;
+    }
+
+    private void SubscribeButtonEvents()
+    {
         _openButtonInteract.OnInteracted += OnOpenButtonInteracted;
         _closeButtonInteract.OnInteracted += OnCloseButtonInteracted;
         _goUpButtonInteract.OnInteracted += OnGoUpButtonInteracted;
         _goDownButtonInteract.OnInteracted += OnGoDownButtonInteracted;
-
     }
 
-    public override void OnDisable()
+    private void UnsubscribeButtonEvents()
     {
         _openButtonInteract.OnInteracted -= OnOpenButtonInteracted;
         _closeButtonInteract.OnInteracted -= OnCloseButtonInteracted;
@@ -50,82 +118,92 @@ public class ButtonPanel : Script
         _goDownButtonInteract.OnInteracted -= OnGoDownButtonInteracted;
     }
 
-
-
     private void OnGoUpButtonInteracted(Actor actor)
     {
         if (_state != State.Idle) return;
-        throw new NotImplementedException();
-        SwitchState(State.Opening);
-        PlayButtonAnimation(_goUpButton);
-    }
 
+        _goUpButton.Layer = 0;
+        PlayButtonAnimation(_goUpButton);
+        SwitchState(State.GoingUp);
+        StartElevatorVibration();
+    }
 
     private void OnGoDownButtonInteracted(Actor actor)
     {
         if (_state != State.Idle) return;
-        throw new NotImplementedException();
-        SwitchState(State.Closing);
+
+        _goDownButton.Layer = 0;
         PlayButtonAnimation(_goDownButton);
+        SwitchState(State.GoingDown);
+        StartElevatorVibration();
     }
+
+    private void StartElevatorVibration()
+    {
+        if (_elevatorActor == null) return;
+
+        _originalPosition = _elevatorActor.LocalPosition;
+        _vibrationTime = 0f;
+        _isVibrating = true;
+    }
+
+    private void StopElevatorVibration()
+    {
+        if (_elevatorActor == null) return;
+
+        _elevatorActor.LocalPosition = _originalPosition;
+        _isVibrating = false;
+    }
+
+
 
     private void OnCloseButtonInteracted(Actor actor)
     {
-        Debug.Log($"State: {_state} -- DoorState: {_doorState}");
+
         if (_state != State.Idle || _doorState == DoorState.Closed) return;
+
         SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorClose);
         _closeButton.Layer = 0;
+        PlayButtonAnimation(_closeButton);
         SwitchState(State.Closing);
         _doorState = DoorState.Closed;
-        PlayButtonAnimation(_closeButton);
-
     }
 
     private void OnOpenButtonInteracted(Actor actor)
     {
-        Debug.Log($"State: {_state} -- DoorState: {_doorState}");
+
         if (_state != State.Idle || _doorState == DoorState.Open) return;
+
         SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorOpen);
         _openButton.Layer = 0;
+        PlayButtonAnimation(_openButton);
         SwitchState(State.Opening);
         _doorState = DoorState.Open;
-        PlayButtonAnimation(_openButton);
-
     }
 
     private void PlayButtonAnimation(Actor buttonActor)
     {
-        Actor parent = buttonActor.Parent;
-        SingletonManager.Get<SceneAnimationManager>().PlayAnimation("Button", parent, _buttonPress);
-    }
+        if (buttonActor?.Parent == null) return;
 
+        SingletonManager.Get<SceneAnimationManager>()
+            .PlayAnimation("Button", buttonActor.Parent, _buttonPress);
 
-    private void InitializeButtons()
-    {
-        if (_openButton == null || !_openButton.TryGetScript(out _openButtonInteract))
-            throw new Exception("Open button is null");
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_buttonPressSound, buttonActor.Position, 0.5f);
 
-        if (_closeButton == null || !_closeButton.TryGetScript(out _closeButtonInteract))
-            throw new Exception("Close button is null");
-
-        if (_goUpButton == null || !_goUpButton.TryGetScript(out _goUpButtonInteract))
-            throw new Exception("Go Up button is null");
-
-        if (_goDownButton == null || !_goDownButton.TryGetScript(out _goDownButtonInteract))
-            throw new Exception("Go Down button is null");
     }
 
     private void SwitchState(State newState)
     {
-        if (newState == _state) return;
-        _state = newState;
+        if (_state != newState)
+            _state = newState;
     }
 
     public void SwitchToIdle()
     {
-
-        _closeButton.Layer = 2;
         _openButton.Layer = 2;
+        _closeButton.Layer = 2;
+        _goUpButton.Layer = 2;
+        _goDownButton.Layer = 2;
         SwitchState(State.Idle);
     }
 
