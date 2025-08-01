@@ -729,8 +729,11 @@
 	"_elevatorClose": "f07d744f4a8155b4162c358ae9b21780",
 	"_buttonPress": "e80448ac49ecc5bc27f8339cc91c806f",
 	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
-	"_vibrationIntensity": 200.0,
-	"_vibrationFrequency": 50.0,
+	"_vibrationSound": "0982b8d0411676fd456ec18cfdd1af93",
+	"_dingSound": "9713d5424ad01b2f42d2049bbe296970",
+	"_moveDoorSound": "256ee0904e2eeccda05f85aeba0f2e31",
+	"_vibrationIntensity": 300.0,
+	"_vibrationFrequency": 100.0,
 	"_easingType": 13
 }
 		},

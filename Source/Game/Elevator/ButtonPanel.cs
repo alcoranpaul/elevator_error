@@ -21,6 +21,9 @@ public class ButtonPanel : Script
     [ShowInEditor, Serialize] private SceneAnimation _buttonPress;
 
     [ShowInEditor, Serialize] private AudioClip _buttonPressSound;
+    [ShowInEditor, Serialize] private AudioClip _vibrationSound;
+    [ShowInEditor, Serialize] private AudioClip _dingSound;
+    [ShowInEditor, Serialize] private AudioClip _moveDoorSound;
 
     [ShowInEditor, Serialize] private float transitionDuration = 5f;
 
@@ -92,6 +95,7 @@ public class ButtonPanel : Script
 
             if (_vibrationTime >= transitionDuration)
             {
+
                 StopElevatorVibration();
                 SwitchToIdle();
                 OnOpenButtonInteracted(null);
@@ -197,6 +201,8 @@ public class ButtonPanel : Script
         _originalPosition = _elevatorActor.LocalPosition;
         _vibrationTime = 0f;
         _isVibrating = true;
+
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_vibrationSound, _elevatorActor.Position);
     }
 
     private void StopElevatorVibration()
@@ -205,6 +211,7 @@ public class ButtonPanel : Script
 
         _elevatorActor.LocalPosition = _originalPosition;
         _isVibrating = false;
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_dingSound, _elevatorActor.Position);
     }
 
 
@@ -215,8 +222,13 @@ public class ButtonPanel : Script
         if (_state != State.Idle || _doorState == DoorState.Closed) return;
 
         SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorClose);
+
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_moveDoorSound, _elevatorActor.Position);
+
+        if (actor != null)
+            PlayButtonAnimation(_closeButton);
+
         _closeButton.Layer = 0;
-        PlayButtonAnimation(_closeButton);
         SwitchState(State.Closing);
         _doorState = DoorState.Closed;
     }
@@ -227,8 +239,13 @@ public class ButtonPanel : Script
         if (_state != State.Idle || _doorState == DoorState.Open) return;
 
         SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorOpen);
+
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_moveDoorSound, _elevatorActor.Position);
+
+        if (actor != null)
+            PlayButtonAnimation(_openButton);
+
         _openButton.Layer = 0;
-        PlayButtonAnimation(_openButton);
         SwitchState(State.Opening);
         _doorState = DoorState.Open;
     }
