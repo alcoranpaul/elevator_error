@@ -551,6 +551,7 @@
 			"ID": "bc81376747666609b0974580a21519a1",
 			"TypeName": "FlaxEngine.Sky",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "Sky",
 			"Transform": {
 				"Translation": {
@@ -628,11 +629,11 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map DoorLeft",
-			"Model": "f78f87a94da876399fe07da1db84d0ab",
+			"Model": "156bcab94e2bba795adfb0967693440d",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -645,11 +646,11 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map DoorRight",
-			"Model": "16b9f5b7427c817f2ad076b83dec2447",
+			"Model": "bdb973f8448d9743242667b9e913639e",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -662,23 +663,23 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map Elevator",
-			"Model": "eff435fb4d3a94967409058b30580509",
+			"Model": "213f8f5c4dc3483b6edde38fda13959b",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "8391b6da40053a988a0959ab9f26f700",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8391b6da40053a988a0959ab9f26f700",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -691,17 +692,17 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map FloorLevel",
-			"Model": "34b2ca964aee512d2a8d8bae7d0e4757",
+			"Model": "7f47d7a94548c3e2d479c2802cc94c15",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -742,11 +743,11 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map",
-			"Model": "57f48a1b414d04bddd2570a3e6ab1f24",
+			"Model": "5d3e558b4113791adc78b7ab6d59ccd5",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -760,23 +761,23 @@
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map DownButton",
 			"StaticFlags": 0,
-			"Model": "25fb54714d58b6012e7967a1a3f874c7",
+			"Model": "4a52dc724b9530ee64427f980a40ba57",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -817,23 +818,23 @@
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map UpButton",
 			"StaticFlags": 0,
-			"Model": "d73ead9b47aa062fd77ba98fa0791956",
+			"Model": "47467bf244ccb36cbe36508e9d9ed4a3",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -874,23 +875,23 @@
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map UpButton.001",
 			"StaticFlags": 0,
-			"Model": "3e959b7c473a1433a86fda9f6ebe4a5e",
+			"Model": "d8cc2dcf4ff7936e66976d86c8bfbffb",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -931,23 +932,23 @@
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map UpButton.002",
 			"StaticFlags": 0,
-			"Model": "d9c295384b0ac0bdc9f16999fb8ee1eb",
+			"Model": "3212bc404bd6b53138c7e8b8f4e1065d",
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "0076fda9417cb4760b013abc692463bd",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "f5b99c754257d507ecb1b394ad40cbac",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -1082,6 +1083,83 @@
 			"ParentID": "1a0d66964effe0de552acbab6cc6a417",
 			"Name": "Audio Listener",
 			"StaticFlags": 0
+		},
+		{
+			"ID": "458ad5314e02bfb4820bc884cee4ba1e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "layout",
+			"Model": "746d72824b507fde19428fbe34e1a704",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
 		}
 	]
 }
