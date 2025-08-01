@@ -728,6 +728,7 @@
 	"_elevatorOpen": "e89a323e456d1f255f2e0eaeec7024aa",
 	"_elevatorClose": "f07d744f4a8155b4162c358ae9b21780",
 	"_buttonPress": "e80448ac49ecc5bc27f8339cc91c806f",
+	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
 	"_vibrationIntensity": 200.0,
 	"_vibrationFrequency": 50.0,
 	"_easingType": 13

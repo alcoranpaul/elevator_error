@@ -44,6 +44,10 @@ public class ButtonPanel : Script
 
     [ShowInEditor, Serialize] private TransitionType _easingType = TransitionType.EaseOutSine;
 
+    private float _pendingActionTimer = -1f;
+    private Action _pendingActionAfterDoorClose = null;
+
+
     public override void OnAwake()
     {
         InitializeButtons();
@@ -57,12 +61,22 @@ public class ButtonPanel : Script
 
     public override void OnUpdate()
     {
+        if (_pendingActionTimer >= 0f)
+        {
+            _pendingActionTimer -= Time.DeltaTime;
+            if (_pendingActionTimer <= 0f)
+            {
+                _pendingActionTimer = -1f;
+                _pendingActionAfterDoorClose?.Invoke();
+                _pendingActionAfterDoorClose = null;
+            }
+        }
+
         if (_isVibrating && _elevatorActor != null)
         {
             _vibrationTime += Time.DeltaTime;
             float remainingTime = transitionDuration - _vibrationTime;
 
-            // Determine easing factor only in the last second
             float easeFactor = remainingTime <= 1f
                 ? Apply(_easingType, Mathf.Clamp(remainingTime, 0f, 1f))
                 : 1f;
@@ -81,10 +95,10 @@ public class ButtonPanel : Script
                 StopElevatorVibration();
                 SwitchToIdle();
                 OnOpenButtonInteracted(null);
-
             }
         }
     }
+
 
 
     private void InitializeButtons()
@@ -124,8 +138,20 @@ public class ButtonPanel : Script
 
         _goUpButton.Layer = 0;
         PlayButtonAnimation(_goUpButton);
-        SwitchState(State.GoingUp);
-        StartElevatorVibration();
+
+        if (_doorState == DoorState.Open)
+        {
+            CloseDoorsThen(() =>
+            {
+                SwitchState(State.GoingUp);
+                StartElevatorVibration();
+            });
+        }
+        else
+        {
+            SwitchState(State.GoingUp);
+            StartElevatorVibration();
+        }
     }
 
     private void OnGoDownButtonInteracted(Actor actor)
@@ -134,9 +160,35 @@ public class ButtonPanel : Script
 
         _goDownButton.Layer = 0;
         PlayButtonAnimation(_goDownButton);
-        SwitchState(State.GoingDown);
-        StartElevatorVibration();
+
+        if (_doorState == DoorState.Open)
+        {
+            CloseDoorsThen(() =>
+            {
+                SwitchState(State.GoingDown);
+                StartElevatorVibration();
+            });
+        }
+        else
+        {
+            SwitchState(State.GoingDown);
+            StartElevatorVibration();
+        }
     }
+
+    private void CloseDoorsThen(Action callback)
+    {
+        SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorClose);
+        _closeButton.Layer = 0;
+
+        _doorState = DoorState.Closed;
+        SwitchState(State.Closing);
+
+        _pendingActionAfterDoorClose = callback;
+        _pendingActionTimer = transitionDuration;
+    }
+
+
 
     private void StartElevatorVibration()
     {
