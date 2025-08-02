@@ -1127,30 +1127,6 @@
 			}
 		},
 		{
-			"ID": "66f39c4b46738bbd58c96983caa77f34",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "be32f9ea4d3cf5eea263399b8e2ce864",
-			"Name": "SM_Bld_Door_Large_01_R",
-			"Transform": {
-				"Translation": {
-					"X": -95.0,
-					"Y": 0.0,
-					"Z": 0.0
-				}
-			},
-			"Model": "41faa8914fe116c9ca0d148ac85efd2f",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
 			"ID": "56b2d9e04432625f50719ab4b377722c",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "be32f9ea4d3cf5eea263399b8e2ce864",
@@ -1163,6 +1139,30 @@
 				}
 			},
 			"Model": "c264a5bf446e6113167f3e9b4488b2ff",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "66f39c4b46738bbd58c96983caa77f34",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"Name": "SM_Bld_Door_Large_01_R",
+			"Transform": {
+				"Translation": {
+					"X": -95.0,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"Model": "41faa8914fe116c9ca0d148ac85efd2f",
 			"Buffer": {
 				"Entries": [
 					{
@@ -1192,6 +1192,7 @@
 					"W": 0.7071068286895752
 				}
 			},
+			"StaticFlags": 0,
 			"Model": "361c99b64243990a54df0fa20512be7a",
 			"Buffer": {
 				"Entries": [
@@ -1203,6 +1204,36 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "29866e274ee98ee038b387b248f00036",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "4f6f7e0746b439cd972da885b91c731e",
+			"Name": "OfficesDoor",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": -48.82313537597656,
+				"Y": 98.34297180175781,
+				"Z": -3.8795166015625
+			},
+			"Size": {
+				"X": 102.91728973388672,
+				"Y": 196.68594360351563,
+				"Z": 24.72967529296875
+			}
+		},
+		{
+			"ID": "a51304eb46f06a1028ed90810c46fabf",
+			"TypeName": "Game.Door",
+			"ParentID": "29866e274ee98ee038b387b248f00036",
+			"V": {
+	"_openDoor": "039ac2a143e7a4ea78b7399448947e7a",
+	"_closeDoor": "1765855a4490ed5324948da7f1e4cc90",
+	"_doorActor": "4f6f7e0746b439cd972da885b91c731e",
+	"_name": "Office Door",
+	"_collider": "29866e274ee98ee038b387b248f00036"
+}
 		},
 		{
 			"ID": "65f34235491bc27b240e179645972d47",

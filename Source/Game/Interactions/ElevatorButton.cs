@@ -8,6 +8,7 @@ namespace Game;
 /// <summary>
 /// AElevatorButton Script.
 /// </summary>
+[Category("Interactions")]
 public class ElevatorButton : AInteraction
 {
 
