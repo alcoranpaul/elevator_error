@@ -1085,11 +1085,60 @@
 			"StaticFlags": 0
 		},
 		{
-			"ID": "458ad5314e02bfb4820bc884cee4ba1e",
+			"ID": "9b7cd89f43fddc002feceb9295b47440",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "layout",
-			"Model": "746d72824b507fde19428fbe34e1a704",
+			"Model": "2e68bbb74df583bcbcaa3aa4aeef4678",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "1e2eb7a441bd338ad2a41c93291c5651",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "DoubleDoor",
+			"Transform": {
+				"Translation": {
+					"X": -144.58624267578125,
+					"Y": 0.0,
+					"Z": 1416.767578125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": -0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			}
+		},
+		{
+			"ID": "66f39c4b46738bbd58c96983caa77f34",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"Name": "SM_Bld_Door_Large_01_R",
+			"Transform": {
+				"Translation": {
+					"X": -95.0,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"Model": "41faa8914fe116c9ca0d148ac85efd2f",
 			"Buffer": {
 				"Entries": [
 					{
@@ -1097,61 +1146,85 @@
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
-					},
+					}
+				]
+			}
+		},
+		{
+			"ID": "56b2d9e04432625f50719ab4b377722c",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"Name": "SM_Bld_Door_Large_01_L",
+			"Transform": {
+				"Translation": {
+					"X": 95.0,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"Model": "c264a5bf446e6113167f3e9b4488b2ff",
+			"Buffer": {
+				"Entries": [
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
-					},
+					}
+				]
+			}
+		},
+		{
+			"ID": "4f6f7e0746b439cd972da885b91c731e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "SM_Bld_Door_05",
+			"Transform": {
+				"Translation": {
+					"X": 146.57272338867188,
+					"Y": 2.27630615234375,
+					"Z": 741.8062744140625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"Model": "361c99b64243990a54df0fa20512be7a",
+			"Buffer": {
+				"Entries": [
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
+					}
+				]
+			}
+		},
+		{
+			"ID": "65f34235491bc27b240e179645972d47",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "SM_Bld_Door_6",
+			"Transform": {
+				"Translation": {
+					"X": -329.42431640625,
+					"Y": 2.27630615234375,
+					"Z": 648.7164306640625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"Model": "361c99b64243990a54df0fa20512be7a",
+			"Buffer": {
+				"Entries": [
 					{
 						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
