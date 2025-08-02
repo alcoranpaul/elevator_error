@@ -16,6 +16,10 @@ public class Door : AInteraction
     [ShowInEditor, Serialize] private SceneAnimation _closeDoor;
     [ShowInEditor, Serialize] private Actor _doorActor;
 
+    [ShowInEditor, Serialize] private AudioClip _openDoorSFX, _closeDoorSFX;
+
+
+
     private State _state;
 
     private bool _isTurning = false;
@@ -26,7 +30,7 @@ public class Door : AInteraction
     public override void OnAwake()
     {
         base.OnAwake();
-        _state = State.Close;
+        SwitchState(State.Close, false);
     }
 
 
@@ -51,20 +55,26 @@ public class Door : AInteraction
         }
     }
 
-    private void SwitchState(State newState)
+    private void SwitchState(State newState, bool playAnimation = true)
     {
         if (_state == newState)
             return;
 
         _state = newState;
 
+        if (!playAnimation) return;
+        SceneAnimationManager sceneManager = SingletonManager.Get<SceneAnimationManager>();
+        AudioManager audioManager = SingletonManager.Get<AudioManager>();
+
         switch (_state)
         {
             case State.Open:
-                SingletonManager.Get<SceneAnimationManager>().PlayAnimation(DOOR_NAME, _doorActor, _openDoor, OnAnimationFinished);
+                sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _openDoor, OnAnimationFinished);
+                audioManager.Play3DSFXClip(_openDoorSFX, _doorActor.Position);
                 break;
             case State.Close:
-                SingletonManager.Get<SceneAnimationManager>().PlayAnimation(DOOR_NAME, _doorActor, _closeDoor, OnAnimationFinished);
+                sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _closeDoor, OnAnimationFinished);
+                audioManager.Play3DSFXClip(_closeDoorSFX, _doorActor.Position);
                 break;
         }
 

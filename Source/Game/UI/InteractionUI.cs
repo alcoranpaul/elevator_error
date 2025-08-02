@@ -20,7 +20,7 @@ public class InteractionUI : Script
 
     public override void OnAwake()
     {
-        _interactionText = DigiTalino_Plugin.UIHelper.GetLabel(_interactionTextControl);
+        _interactionText = UIHelper.GetLabel(_interactionTextControl);
         _contentControl.Control.Visible = false;
     }
 
