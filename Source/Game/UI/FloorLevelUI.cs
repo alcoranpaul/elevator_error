@@ -15,6 +15,7 @@ public class FloorLevelUI : Script
     public override void OnStart()
     {
         _floorLabel = UIHelper.GetLabel(_labelControl);
+        _floorLabel.Text = "G";
         SingletonManager.Get<FloorManager>().OnFloorChanged += OnFloorChanged;
     }
 

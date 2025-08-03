@@ -674,6 +674,23 @@
 			}
 		},
 		{
+			"ID": "ca6032464f6bebbce8ce57be7a4c3733",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "ab2f0b8a4aaf9fefac1bcfa573a1bf02",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Center": {
+				"X": -55.000003814697266,
+				"Y": 140.45440673828125,
+				"Z": 160.7490692138672
+			},
+			"Size": {
+				"X": 110.14615631103516,
+				"Y": 290.59283447265625,
+				"Z": 3.522369384765625
+			}
+		},
+		{
 			"ID": "54bb4e3a474c28475e77208126085089",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
@@ -689,6 +706,23 @@
 						"ReceiveDecals": true
 					}
 				]
+			}
+		},
+		{
+			"ID": "73b396df430f38990f7deda082b118d1",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "54bb4e3a474c28475e77208126085089",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Center": {
+				"X": 55.3408317565918,
+				"Y": 140.45440673828125,
+				"Z": 160.7490692138672
+			},
+			"Size": {
+				"X": 110.14615631103516,
+				"Y": 290.59283447265625,
+				"Z": 3.522369384765625
 			}
 		},
 		{
@@ -720,6 +754,14 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "dacc348947491657e73903a47987165f",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "acf13b7b4c1603ca64ae4ea11809b70c",
+			"Name": "MeshCollider",
+			"StaticFlags": 0,
+			"CollisionData": "f249e0614312ac4176648a8c6fe9a3b4"
 		},
 		{
 			"ID": "ca43dee04a0c0591ef98239e7385e121",
@@ -920,15 +962,15 @@
 	"Wrapping": 0,
 	"BaseLinesGapScale": 1.0,
 	"Font": {
-		"Font": "4508d98f4aa1f0bd59362b81d47e38f4",
+		"Font": "4a19cd484a5d19bbc5a6ba9a5a2b4043",
 		"Size": 150.0
 	},
 	"Material": null,
 	"Margin": {
 		"Left": 2.0,
 		"Right": 2.0,
-		"Top": 2.0,
-		"Bottom": 2.0
+		"Top": 0.0,
+		"Bottom": 5.0
 	},
 	"ClipText": false,
 	"AutoWidth": false,
@@ -1001,8 +1043,8 @@
 	"_vibrationSound": "0982b8d0411676fd456ec18cfdd1af93",
 	"_dingSound": "9713d5424ad01b2f42d2049bbe296970",
 	"_moveDoorSound": "256ee0904e2eeccda05f85aeba0f2e31",
-	"_vibrationIntensity": 300.0,
-	"_vibrationFrequency": 100.0,
+	"_vibrationIntensity": 1000.0,
+	"_vibrationFrequency": 500.0,
 	"_easingType": 13
 }
 		},
@@ -1261,6 +1303,36 @@
 }
 		},
 		{
+			"ID": "9b7cd89f43fddc002feceb9295b47440",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"Name": "layout",
+			"Model": "2e68bbb74df583bcbcaa3aa4aeef4678",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "1e2eb7a441bd338ad2a41c93291c5651",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "3e18194b4318289753806db295477648",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "9b7cd89f43fddc002feceb9295b47440",
+			"Name": "MeshCollider",
+			"CollisionData": "ef9e4fe84c7078c12a93109b8d7c5e73"
+		},
+		{
 			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -1360,29 +1432,6 @@
 			"ParentID": "1a0d66964effe0de552acbab6cc6a417",
 			"Name": "Audio Listener",
 			"StaticFlags": 0
-		},
-		{
-			"ID": "9b7cd89f43fddc002feceb9295b47440",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "layout",
-			"Model": "2e68bbb74df583bcbcaa3aa4aeef4678",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
-						"Material": "1e2eb7a441bd338ad2a41c93291c5651",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
 		},
 		{
 			"ID": "be32f9ea4d3cf5eea263399b8e2ce864",
