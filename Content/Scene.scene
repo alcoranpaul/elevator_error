@@ -619,6 +619,28 @@
 			"Mode": 0
 		},
 		{
+			"ID": "a3957cbc4d6665320f93b3826ce74c53",
+			"TypeName": "FlaxEngine.PostFxVolume",
+			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"Name": "PostFxVolume",
+			"IsBounded": false,
+			"Settings": {
+				"AO": {},
+				"GI": {},
+				"Bloom": {},
+				"ToneMapping": {},
+				"ColorGrading": {},
+				"EyeAdaptation": {},
+				"CameraArtifacts": {},
+				"LensFlares": {},
+				"DepthOfField": {},
+				"MotionBlur": {},
+				"SSR": {},
+				"AA": {},
+				"PostFxMaterials": {}
+			}
+		},
+		{
 			"ID": "b82fdced42090079fed2f9ac98b166d3",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -808,6 +830,8 @@
 			"TypeName": "Game.ElevatorButton",
 			"ParentID": "9e06951049cc36843cced1bfea3a814a",
 			"V": {
+	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
+	"_buttonPressAnim": "e80448ac49ecc5bc27f8339cc91c806f",
 	"_name": "Go Down",
 	"_collider": "9e06951049cc36843cced1bfea3a814a"
 }
@@ -865,6 +889,8 @@
 			"TypeName": "Game.ElevatorButton",
 			"ParentID": "9b3cbd3b46d33a3185a3c69b22b4d82e",
 			"V": {
+	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
+	"_buttonPressAnim": "e80448ac49ecc5bc27f8339cc91c806f",
 	"_name": "Go Up",
 	"_collider": "9b3cbd3b46d33a3185a3c69b22b4d82e"
 }
@@ -922,6 +948,8 @@
 			"TypeName": "Game.ElevatorButton",
 			"ParentID": "24ac03c24521ec0c357dfda3e5dbe2ec",
 			"V": {
+	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
+	"_buttonPressAnim": "e80448ac49ecc5bc27f8339cc91c806f",
 	"_name": "Open Elevator Door",
 	"_collider": "24ac03c24521ec0c357dfda3e5dbe2ec"
 }
@@ -979,6 +1007,8 @@
 			"TypeName": "Game.ElevatorButton",
 			"ParentID": "32c89cfc4067e4caf3f909879196b3fb",
 			"V": {
+	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
+	"_buttonPressAnim": "e80448ac49ecc5bc27f8339cc91c806f",
 	"_name": "Close Elevator Door",
 	"_collider": "32c89cfc4067e4caf3f909879196b3fb"
 }
