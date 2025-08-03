@@ -36,6 +36,14 @@
 			"V": {}
 		},
 		{
+			"ID": "dd226c03495efdb096a01f9e1a54ddd1",
+			"TypeName": "Game.FloorManager",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {
+	"_buttonPanel": "b20961734922d145362254a2773efd08"
+}
+		},
+		{
 			"ID": "c9ad75204dea324c3e8185ae44baac5f",
 			"TypeName": "FlaxEngine.UICanvas",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -644,13 +652,15 @@
 			"ID": "b82fdced42090079fed2f9ac98b166d3",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "Map"
+			"Name": "Map",
+			"StaticFlags": 0
 		},
 		{
 			"ID": "ab2f0b8a4aaf9fefac1bcfa573a1bf02",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map DoorLeft",
+			"StaticFlags": 0,
 			"Model": "156bcab94e2bba795adfb0967693440d",
 			"Buffer": {
 				"Entries": [
@@ -668,6 +678,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map DoorRight",
+			"StaticFlags": 0,
 			"Model": "bdb973f8448d9743242667b9e913639e",
 			"Buffer": {
 				"Entries": [
@@ -685,6 +696,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map Elevator",
+			"StaticFlags": 0,
 			"Model": "213f8f5c4dc3483b6edde38fda13959b",
 			"Buffer": {
 				"Entries": [
@@ -714,6 +726,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
 			"Name": "map FloorLevel",
+			"StaticFlags": 0,
 			"Model": "7f47d7a94548c3e2d479c2802cc94c15",
 			"Buffer": {
 				"Entries": [
@@ -733,10 +746,245 @@
 			}
 		},
 		{
+			"ID": "a286301342082fe371d56cacfcc0de96",
+			"TypeName": "FlaxEngine.UICanvas",
+			"ParentID": "ca43dee04a0c0591ef98239e7385e121",
+			"Name": "UICanvas",
+			"Transform": {
+				"Translation": {
+					"X": -17.473796844482422,
+					"Y": 293.9952392578125,
+					"Z": 143.13821411132813
+				},
+				"Orientation": {
+					"X": 0.9975640773773193,
+					"Y": 5.124607014295179e-7,
+					"Z": 5.124607014295179e-7,
+					"W": 0.06975647062063217
+				}
+			},
+			"V": {
+	"RenderMode": 2,
+	"ReceivesEvents": false,
+	"Size": {
+		"X": 35.0,
+		"Y": 35.0
+	}
+}
+		},
+		{
+			"ID": "02c92bec408b510deee16bb5268ae41f",
+			"TypeName": "Game.FloorLevelUI",
+			"ParentID": "a286301342082fe371d56cacfcc0de96",
+			"V": {
+	"_labelControl": "92bf8a8b4ccb8c0005867ba6cfa6cd45"
+}
+		},
+		{
+			"ID": "a1f632c94379f95bbef76b80483a0182",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "a286301342082fe371d56cacfcc0de96",
+			"Name": "Canvas Scalar",
+			"Control": "FlaxEngine.GUI.CanvasScaler",
+			"Data": {
+	"ResolutionCurve": {
+		"Keyframes": [
+			{
+				"Time": 0.0,
+				"Value": 0.0
+			},
+			{
+				"Time": 480.0,
+				"Value": 0.444
+			},
+			{
+				"Time": 720.0,
+				"Value": 0.666
+			},
+			{
+				"Time": 1080.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 8640.0,
+				"Value": 8.0
+			}
+		]
+	},
+	"DpiCurve": {
+		"Keyframes": [
+			{
+				"Time": 1.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 96.0,
+				"Value": 1.0
+			},
+			{
+				"Time": 200.0,
+				"Value": 2.0
+			},
+			{
+				"Time": 400.0,
+				"Value": 4.0
+			}
+		]
+	},
+	"Scaling": 2,
+	"ScaleFactor": 1.0,
+	"PhysicalUnit": 3,
+	"PhysicalUnitSize": 1.0,
+	"ResolutionMode": 0,
+	"ResolutionMin": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"ResolutionMax": {
+		"X": 7680.0,
+		"Y": 4320.0
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Offsets": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.94545555,
+		"G": 0.0,
+		"B": 1.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
+			"ID": "92bf8a8b4ccb8c0005867ba6cfa6cd45",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "a1f632c94379f95bbef76b80483a0182",
+			"Name": "Label",
+			"Transform": {
+				"Translation": {
+					"X": -0.24842262268066406,
+					"Y": -2.3623248068815883e-7,
+					"Z": -2.7175440209248336e-7
+				}
+			},
+			"Control": "FlaxEngine.GUI.Label",
+			"Data": {
+	"Text": "-1",
+	"CaseOption": 0,
+	"Bold": false,
+	"Italic": false,
+	"TextColor": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"TextColorHighlighted": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"HorizontalAlignment": 1,
+	"VerticalAlignment": 1,
+	"Wrapping": 0,
+	"BaseLinesGapScale": 1.0,
+	"Font": {
+		"Font": "4508d98f4aa1f0bd59362b81d47e38f4",
+		"Size": 150.0
+	},
+	"Material": null,
+	"Margin": {
+		"Left": 2.0,
+		"Right": 2.0,
+		"Top": 2.0,
+		"Bottom": 2.0
+	},
+	"ClipText": false,
+	"AutoWidth": false,
+	"AutoHeight": false,
+	"AutoFitText": true,
+	"AutoFitTextRange": {
+		"X": 0.15,
+		"Y": 0.15
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Offsets": {
+		"Left": -0.24842262,
+		"Right": 0.24842072,
+		"Top": -2.3623248E-07,
+		"Bottom": 0.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
 			"ID": "68524fc6445198740bcfa5a23a58b59f",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
-			"Name": "ButtonPanel"
+			"Name": "ButtonPanel",
+			"StaticFlags": 0
 		},
 		{
 			"ID": "b20961734922d145362254a2773efd08",
@@ -750,8 +998,6 @@
 	"_goDownButton": "9e06951049cc36843cced1bfea3a814a",
 	"_elevatorOpen": "e89a323e456d1f255f2e0eaeec7024aa",
 	"_elevatorClose": "f07d744f4a8155b4162c358ae9b21780",
-	"_buttonPress": "e80448ac49ecc5bc27f8339cc91c806f",
-	"_buttonPressSound": "0458d4f1452f6cffdad21683470dfe74",
 	"_vibrationSound": "0982b8d0411676fd456ec18cfdd1af93",
 	"_dingSound": "9713d5424ad01b2f42d2049bbe296970",
 	"_moveDoorSound": "256ee0904e2eeccda05f85aeba0f2e31",
@@ -765,6 +1011,7 @@
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "68524fc6445198740bcfa5a23a58b59f",
 			"Name": "map",
+			"StaticFlags": 0,
 			"Model": "5d3e558b4113791adc78b7ab6d59ccd5",
 			"Buffer": {
 				"Entries": [

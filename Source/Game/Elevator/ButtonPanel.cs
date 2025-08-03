@@ -10,7 +10,7 @@ namespace Game;
 /// </summary>
 public class ButtonPanel : Script
 {
-    // TODO: Make each button into a script that will handle interaction events but the logic is here. Such as Animations and Sounds
+    public event Func<bool> OnFloorAdvanceRequested;
     [ShowInEditor, Serialize] private Actor _elevatorActor;
     [ShowInEditor, Serialize] private Actor _openButton;
     [ShowInEditor, Serialize] private Actor _closeButton;
@@ -139,9 +139,12 @@ public class ButtonPanel : Script
 
         if (_state != State.Idle) return;
 
+        if (OnFloorAdvanceRequested?.Invoke() == false) return;
 
         if (_doorState == DoorState.Open)
         {
+
+
             CloseDoorsThen(() =>
             {
                 SwitchState(State.GoingUp);
@@ -158,8 +161,6 @@ public class ButtonPanel : Script
     private void OnGoDownButtonInteracted(Actor actor)
     {
         if (_state != State.Idle) return;
-
-
 
         if (_doorState == DoorState.Open)
         {
