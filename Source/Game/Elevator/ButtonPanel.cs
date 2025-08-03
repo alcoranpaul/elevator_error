@@ -10,6 +10,7 @@ namespace Game;
 /// </summary>
 public class ButtonPanel : Script
 {
+    // TODO: Make each button into a script that will handle interaction events but the logic is here. Such as Animations and Sounds
     [ShowInEditor, Serialize] private Actor _elevatorActor;
     [ShowInEditor, Serialize] private Actor _openButton;
     [ShowInEditor, Serialize] private Actor _closeButton;
@@ -18,9 +19,6 @@ public class ButtonPanel : Script
 
     [ShowInEditor, Serialize] private SceneAnimation _elevatorOpen;
     [ShowInEditor, Serialize] private SceneAnimation _elevatorClose;
-    [ShowInEditor, Serialize] private SceneAnimation _buttonPress;
-
-    [ShowInEditor, Serialize] private AudioClip _buttonPressSound;
     [ShowInEditor, Serialize] private AudioClip _vibrationSound;
     [ShowInEditor, Serialize] private AudioClip _dingSound;
     [ShowInEditor, Serialize] private AudioClip _moveDoorSound;
@@ -138,10 +136,9 @@ public class ButtonPanel : Script
 
     private void OnGoUpButtonInteracted(Actor actor)
     {
+
         if (_state != State.Idle) return;
 
-        _goUpButton.Layer = 0;
-        PlayButtonAnimation(_goUpButton);
 
         if (_doorState == DoorState.Open)
         {
@@ -162,8 +159,7 @@ public class ButtonPanel : Script
     {
         if (_state != State.Idle) return;
 
-        _goDownButton.Layer = 0;
-        PlayButtonAnimation(_goDownButton);
+
 
         if (_doorState == DoorState.Open)
         {
@@ -182,11 +178,7 @@ public class ButtonPanel : Script
 
     private void CloseDoorsThen(Action callback)
     {
-        SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorClose);
-        _closeButton.Layer = 0;
-
-        _doorState = DoorState.Closed;
-        SwitchState(State.Closing);
+        CloseDoors();
 
         _pendingActionAfterDoorClose = callback;
         _pendingActionTimer = transitionDuration;
@@ -196,6 +188,7 @@ public class ButtonPanel : Script
 
     private void StartElevatorVibration()
     {
+
         if (_elevatorActor == null) return;
 
         _originalPosition = _elevatorActor.LocalPosition;
@@ -221,17 +214,21 @@ public class ButtonPanel : Script
 
         if (_state != State.Idle || _doorState == DoorState.Closed) return;
 
+        CloseDoors();
+    }
+
+    private void CloseDoors()
+    {
+
         SingletonManager.Get<SceneAnimationManager>().PlayAnimation(_elevatorClose);
 
         SingletonManager.Get<AudioManager>().Play3DSFXClip(_moveDoorSound, _elevatorActor.Position);
 
-        if (actor != null)
-            PlayButtonAnimation(_closeButton);
 
-        _closeButton.Layer = 0;
         SwitchState(State.Closing);
         _doorState = DoorState.Closed;
     }
+
 
     private void OnOpenButtonInteracted(Actor actor)
     {
@@ -242,24 +239,12 @@ public class ButtonPanel : Script
 
         SingletonManager.Get<AudioManager>().Play3DSFXClip(_moveDoorSound, _elevatorActor.Position);
 
-        if (actor != null)
-            PlayButtonAnimation(_openButton);
-
-        _openButton.Layer = 0;
         SwitchState(State.Opening);
         _doorState = DoorState.Open;
-    }
 
-    private void PlayButtonAnimation(Actor buttonActor)
-    {
-        if (buttonActor?.Parent == null) return;
-
-        SingletonManager.Get<SceneAnimationManager>()
-            .PlayAnimation("Button", buttonActor.Parent, _buttonPress);
-
-        SingletonManager.Get<AudioManager>().Play3DSFXClip(_buttonPressSound, buttonActor.Position, 0.5f);
 
     }
+
 
     private void SwitchState(State newState)
     {
@@ -269,10 +254,7 @@ public class ButtonPanel : Script
 
     public void SwitchToIdle()
     {
-        _openButton.Layer = 2;
-        _closeButton.Layer = 2;
-        _goUpButton.Layer = 2;
-        _goDownButton.Layer = 2;
+
         SwitchState(State.Idle);
     }
 

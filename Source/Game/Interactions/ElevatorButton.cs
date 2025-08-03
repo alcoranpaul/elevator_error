@@ -11,12 +11,37 @@ namespace Game;
 [Category("Interactions")]
 public class ElevatorButton : AInteraction
 {
-
-    protected override void OnInteract(Actor interactor)
+    [ShowInEditor, Serialize] private AudioClip _buttonPressSound;
+    [ShowInEditor, Serialize] private SceneAnimation _buttonPressAnim;
+    /// <inheritdoc/>
+    public override void OnAwake()
     {
+        base.OnAwake();
 
     }
 
+    /// <inheritdoc/>
+    public override void OnStart()
+    {
+        base.OnStart();
+
+    }
+
+    /// <inheritdoc/>
+    protected override void OnInteract(Actor interactor)
+    {
+        PlayButtonAnimation();
+    }
+
+    private void PlayButtonAnimation()
+    {
+
+        SingletonManager.Get<SceneAnimationManager>()
+            .PlayAnimation("Button", Actor.Parent, _buttonPressAnim, (actor) => { FinishInteraction(); });
+
+        SingletonManager.Get<AudioManager>().Play3DSFXClip(_buttonPressSound, Actor.Parent.Position, 0.5f);
+
+    }
 
 
 }
