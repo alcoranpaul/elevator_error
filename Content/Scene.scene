@@ -630,6 +630,7 @@
 			"ID": "a3957cbc4d6665320f93b3826ce74c53",
 			"TypeName": "FlaxEngine.PostFxVolume",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"IsActive": false,
 			"Name": "PostFxVolume",
 			"IsBounded": false,
 			"Settings": {
@@ -1434,15 +1435,29 @@
 			"StaticFlags": 0
 		},
 		{
-			"ID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"ID": "f40ef0bc4e003f73bdef8e963672e65a",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Doors",
+			"Transform": {
+				"Translation": {
+					"X": -109.14594268798828,
+					"Y": 1.5175374746322632,
+					"Z": 935.7633666992188
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "be32f9ea4d3cf5eea263399b8e2ce864",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "f40ef0bc4e003f73bdef8e963672e65a",
 			"Name": "DoubleDoor",
 			"Transform": {
 				"Translation": {
-					"X": -144.58624267578125,
-					"Y": 0.0,
-					"Z": 1416.767578125
+					"X": -35.44029998779297,
+					"Y": -1.5175374746322632,
+					"Z": 481.00421142578125
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -1570,15 +1585,16 @@
 		{
 			"ID": "b764511e4832696479f9a0b59641dc46",
 			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"ParentID": "f40ef0bc4e003f73bdef8e963672e65a",
 			"Name": "OfficeDoor",
 			"Transform": {
 				"Translation": {
-					"X": 146.57272338867188,
-					"Y": 2.27630615234375,
-					"Z": 741.8062744140625
+					"X": 255.71865844726563,
+					"Y": 0.7587686777114868,
+					"Z": -193.95709228515625
 				}
-			}
+			},
+			"StaticFlags": 0
 		},
 		{
 			"ID": "4f6f7e0746b439cd972da885b91c731e",
@@ -1641,15 +1657,16 @@
 		{
 			"ID": "a0d6585449e63c90f8ef40aa3105ce0d",
 			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"ParentID": "f40ef0bc4e003f73bdef8e963672e65a",
 			"Name": "MaintinanceDoor",
 			"Transform": {
 				"Translation": {
-					"X": -329.42431640625,
-					"Y": 2.27630615234375,
-					"Z": 648.7164306640625
+					"X": -220.27838134765625,
+					"Y": 0.7587686777114868,
+					"Z": -287.04693603515625
 				}
-			}
+			},
+			"StaticFlags": 0
 		},
 		{
 			"ID": "65f34235491bc27b240e179645972d47",

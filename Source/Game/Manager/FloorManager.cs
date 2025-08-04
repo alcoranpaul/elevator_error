@@ -157,12 +157,12 @@ public class FloorManager : InstanceManagerScript
     /// <returns>A random anomaly trigger type.</returns>
     private AnomalyTrigger GetRandomTrigger()
     {
-        AnomalyTrigger[] triggers = new[]
-        {
+        AnomalyTrigger[] triggers =
+        [
                 AnomalyTrigger.OnFloorEnter,
                 AnomalyTrigger.OnRoomEnter,
                 AnomalyTrigger.OnDelay
-            };
+            ];
         return triggers[Random.Shared.Next(0, triggers.Length)];
     }
 
