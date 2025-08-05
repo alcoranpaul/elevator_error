@@ -1,0 +1,40 @@
+{
+	"ID": "62f0a08348f9bfb8c71f87bc60cd35f9",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6705,
+	"Data": [
+	{
+		"ID": "ece71e8a4cc75cc64b68eda3db7655dd",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"Name": "DirtyCup",
+		"StaticFlags": 0
+	},
+	{
+		"ID": "140266ed49b5ce3387a6c6ab5bc2989d",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "ece71e8a4cc75cc64b68eda3db7655dd",
+		"Name": "BoxCollider",
+		"StaticFlags": 0,
+		"Layer": 2,
+		"Center": {
+			"X": -4.76837158203125e-7,
+			"Y": 17.438480377197266,
+			"Z": -0.00006103515625
+		},
+		"Size": {
+			"X": 15.544269561767578,
+			"Y": 34.87696075439453,
+			"Z": 15.54461669921875
+		}
+	},
+	{
+		"ID": "7378279d4d4b2c2ef8d4ffbecff0624d",
+		"TypeName": "Game.DirtyItem",
+		"ParentID": "140266ed49b5ce3387a6c6ab5bc2989d",
+		"V": {
+	"_name": "Used Cup",
+	"_collider": "140266ed49b5ce3387a6c6ab5bc2989d"
+}
+	}
+]
+}

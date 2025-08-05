@@ -15,7 +15,7 @@ public class FloorManager : InstanceManagerScript
     /// Event invoked when the current floor changes.
     /// Passes the new floor index (zero-based).
     /// </summary>
-    public event Action<int> OnFloorChanged;
+    public event Action<int> OnFloorChangeRequested;
 
     /// <summary>
     /// Reference to the button panel script responsible for floor change input.
@@ -68,7 +68,7 @@ public class FloorManager : InstanceManagerScript
         if (IsCurrentFloorCleaned())
         {
             GoToNextFloor();
-            OnFloorChanged?.Invoke(FindFloorNumber(_currentFloor) + 1);
+            OnFloorChangeRequested?.Invoke(FindFloorNumber(_currentFloor) + 1);
             return true;
         }
         else
