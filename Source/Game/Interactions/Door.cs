@@ -29,14 +29,31 @@ public class Door : AInteraction
     /// <inheritdoc/>
     public override void OnAwake()
     {
+        _isToggleable = true;
         base.OnAwake();
-        SwitchState(State.Close, false);
+        SwitchState(State.Close, false, false);
     }
 
+    public override void OnStart()
+    {
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating += OnFloorChangeRequested;
+    }
+
+    public override void OnDisable()
+    {
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating -= OnFloorChangeRequested;
+        base.OnDisable();
+    }
+
+    private void OnFloorChangeRequested()
+    {
+        SwitchState(State.Close, true, false);
+    }
 
     /// <inheritdoc/>
     protected override void OnInteract(Actor interactor)
     {
+        Debug.Log("Door interacted");
         ToggleDoor();
     }
 
@@ -55,30 +72,36 @@ public class Door : AInteraction
         }
     }
 
-    private void SwitchState(State newState, bool playAnimation = true)
+    private void SwitchState(State newState, bool playAnimation = true, bool playSound = true)
     {
         if (_state == newState)
             return;
 
+        Debug.Log($"Door state changed to {newState}");
+
         _state = newState;
 
-        if (!playAnimation) return;
+
         SceneAnimationManager sceneManager = SingletonManager.Get<SceneAnimationManager>();
         AudioManager audioManager = SingletonManager.Get<AudioManager>();
 
         switch (_state)
         {
             case State.Open:
-                sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _openDoor, OnAnimationFinished);
-                audioManager.Play3DSFXClip(_openDoorSFX, _doorActor.Position);
+                if (playAnimation)
+                    sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _openDoor, OnAnimationFinished);
+                if (playSound)
+                    audioManager.Play3DSFXClip(_openDoorSFX, _doorActor.Position);
                 break;
             case State.Close:
-                sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _closeDoor, OnAnimationFinished);
-                audioManager.Play3DSFXClip(_closeDoorSFX, _doorActor.Position);
+                if (playAnimation)
+                    sceneManager.PlayAnimation(DOOR_NAME, _doorActor, _closeDoor, OnAnimationFinished);
+                if (playSound)
+                    audioManager.Play3DSFXClip(_closeDoorSFX, _doorActor.Position);
                 break;
         }
-
-        _isTurning = true;
+        if (playAnimation)
+            _isTurning = true;
     }
 
     private void OnAnimationFinished(Actor actor)

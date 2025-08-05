@@ -8,7 +8,7 @@ namespace Game;
 /// <summary>
 /// ButtonPanel Script.
 /// </summary>
-public class ButtonPanel : Script
+public class ButtonPanel : InstanceManagerScript
 {
     public event Func<bool> OnFloorAdvanceRequested;
 
@@ -53,6 +53,7 @@ public class ButtonPanel : Script
 
     public override void OnAwake()
     {
+        base.OnAwake();
         InitializeButtons();
         SubscribeButtonEvents();
     }
