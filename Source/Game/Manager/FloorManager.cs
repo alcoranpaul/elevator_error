@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using DigiTalino_Plugin;
 using FlaxEngine;
 
@@ -32,6 +31,8 @@ public class FloorManager : InstanceManagerScript
     /// The floor data currently active.
     /// </summary>
     private FloorData _currentFloor;
+
+    public int CurrentFloor => FindFloorNumber(_currentFloor) + 1;
 
     /// <summary>
     /// Total number of floors in the building.

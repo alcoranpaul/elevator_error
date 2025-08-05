@@ -11,6 +11,8 @@ namespace Game;
 public class ButtonPanel : Script
 {
     public event Func<bool> OnFloorAdvanceRequested;
+
+    public event Action OnElevatorStoppedVibrating;
     [ShowInEditor, Serialize] private Actor _elevatorActor;
     [ShowInEditor, Serialize] private Actor _openButton;
     [ShowInEditor, Serialize] private Actor _closeButton;
@@ -206,6 +208,7 @@ public class ButtonPanel : Script
         _elevatorActor.LocalPosition = _originalPosition;
         _isVibrating = false;
         SingletonManager.Get<AudioManager>().Play3DSFXClip(_dingSound, _elevatorActor.Position);
+        OnElevatorStoppedVibrating?.Invoke();
     }
 
 
