@@ -21,14 +21,14 @@ public class FloorLevelUI : Script
     {
         _floorLabel = UIHelper.GetLabel(_labelControl);
         _floorLabel.Text = GROUND_FLOOR;
-        SingletonManager.Get<FloorManager>().OnFloorChanged += OnFloorChanged;
+        SingletonManager.Get<FloorManager>().OnFloorChangeRequested += OnFloorChanged;
         _buttonPanel.OnElevatorStoppedVibrating += OnButtonPanel_OnElevatorStopped;
     }
 
 
     public override void OnDisable()
     {
-        SingletonManager.Get<FloorManager>().OnFloorChanged -= OnFloorChanged;
+        SingletonManager.Get<FloorManager>().OnFloorChangeRequested -= OnFloorChanged;
         _buttonPanel.OnElevatorStoppedVibrating -= OnButtonPanel_OnElevatorStopped;
         base.OnDisable();
     }
