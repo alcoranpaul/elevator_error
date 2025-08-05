@@ -53,7 +53,6 @@ public class Door : AInteraction
     /// <inheritdoc/>
     protected override void OnInteract(Actor interactor)
     {
-        Debug.Log("Door interacted");
         ToggleDoor();
     }
 
@@ -76,8 +75,6 @@ public class Door : AInteraction
     {
         if (_state == newState)
             return;
-
-        Debug.Log($"Door state changed to {newState}");
 
         _state = newState;
 
