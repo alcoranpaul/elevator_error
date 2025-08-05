@@ -608,7 +608,7 @@
 			"TypeName": "FlaxEngine.SkyLight",
 			"ParentID": "28553d634087c67c711ebd96080482aa",
 			"Name": "SkyLight",
-			"Brightness": 0.6000000238418579,
+			"Brightness": 3.140000104904175,
 			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
 		},
 		{
@@ -1354,6 +1354,7 @@
 			"ID": "d329101e4d72754c390913a9229f03d9",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "6ad83e054f64de9d576670a5a2db136e",
+			"IsActive": false,
 			"Name": "SM_Prop_Light_Fluorescent_9",
 			"Transform": {
 				"Translation": {
@@ -1388,7 +1389,7 @@
 			"Transform": {
 				"Translation": {
 					"X": -0.0,
-					"Y": -73.19686889648438,
+					"Y": -120.85261535644531,
 					"Z": 0.0
 				},
 				"Orientation": {
@@ -1404,10 +1405,12 @@
 				"B": 1.0,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
+			"Brightness": 3.0,
+			"ViewDistance": 800.0,
 			"ShadowsDistance": 5000.0,
 			"ShadowsFadeDistance": 500.0,
 			"ShadowsDepthBias": 0.004999999888241291,
+			"Radius": 353.3999938964844,
 			"SourceRadius": 5.0,
 			"SourceLength": 200.0,
 			"FallOffExponent": 16.0
@@ -1680,6 +1683,7 @@
 			"ID": "7faa3e7f4fcd75be67cd809a7b9630f5",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "669683d1442a4e0f0c6580ac72a62541",
+			"IsActive": false,
 			"Name": "SM_Prop_Light_Fluorescent_10",
 			"Transform": {
 				"Translation": {
@@ -2751,6 +2755,7 @@
 			"ID": "7538b8d74bf3a5aeac02f5a88f4216e2",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "bd8fa70947c861b251ef71b79f638edb",
+			"IsActive": false,
 			"Name": "Lights",
 			"Transform": {
 				"Translation": {
@@ -3013,6 +3018,33 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "fc5953094b8d0fad8b9ce0a41ff9c974",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "559e595849923b1209f549933686aad3",
+			"Name": "BoxCollider",
+			"Layer": 2,
+			"Center": {
+				"X": -0.000091552734375,
+				"Y": 0.0,
+				"Z": 0.0001220703125
+			},
+			"Size": {
+				"X": 12.17266845703125,
+				"Y": 20.278472900390625,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "af5bc5244226952414af6690e128f988",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "fc5953094b8d0fad8b9ce0a41ff9c974",
+			"V": {
+	"_LightActor": "7538b8d74bf3a5aeac02f5a88f4216e2",
+	"_name": "Light Switch",
+	"_collider": "fc5953094b8d0fad8b9ce0a41ff9c974"
+}
 		},
 		{
 			"ID": "adef467042699df81bb2c4b89539f6af",
@@ -5464,6 +5496,7 @@
 			"ID": "aab85bed48fa37e36e2a6081e02bf335",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "adef467042699df81bb2c4b89539f6af",
+			"IsActive": false,
 			"Name": "Lights",
 			"Transform": {
 				"Translation": {
@@ -6370,64 +6403,6 @@
 			}
 		},
 		{
-			"ID": "2f9114564011e2afd46046b8fde37d1d",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "c4b81411454d80de488c1b9c3fa5411b",
-			"Name": "SM_Prop_Light_Fluorescent_4",
-			"Transform": {
-				"Translation": {
-					"X": 90.67281341552734,
-					"Y": 265.24755859375,
-					"Z": -486.04638671875
-				}
-			},
-			"Model": "c5e82461497aabc11c206e96941aab8d",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "f3dc2c6b467abe50b684f2a55d8d5059",
-			"TypeName": "FlaxEngine.PointLight",
-			"ParentID": "2f9114564011e2afd46046b8fde37d1d",
-			"Name": "PointLight",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": -83.93923950195313,
-					"Z": 0.0
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.7071068286895752,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"Color": {
-				"R": 0.665742039680481,
-				"G": 0.9140836000442505,
-				"B": 1.0,
-				"A": 1.0
-			},
-			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
-			"ShadowsFadeDistance": 7000.0,
-			"ShadowsDepthBias": 0.30000001192092896,
-			"ShadowsUpdateRateAtDistance": 0.5,
-			"Radius": 1100.0,
-			"SourceRadius": 5.0,
-			"SourceLength": 200.0,
-			"FallOffExponent": 16.0
-		},
-		{
 			"ID": "eb47495045255ca89135e1880304088c",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "c4b81411454d80de488c1b9c3fa5411b",
@@ -6675,6 +6650,7 @@
 			"ID": "bcecdf634bed700cb2587f84399f963a",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "c4b81411454d80de488c1b9c3fa5411b",
+			"IsActive": false,
 			"Name": "Lights",
 			"Transform": {
 				"Translation": {
@@ -6732,8 +6708,8 @@
 				"B": 1.0,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"Brightness": 10.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
 			"Radius": 1100.0,
@@ -6789,8 +6765,8 @@
 				"B": 1.0,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"Brightness": 10.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
 			"Radius": 1100.0,
@@ -6852,11 +6828,11 @@
 				"B": 1.0,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"Brightness": 10.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
-			"Radius": 1100.0,
+			"Radius": 800.0,
 			"SourceRadius": 5.0,
 			"SourceLength": 230.0,
 			"FallOffExponent": 16.0
@@ -6889,6 +6865,7 @@
 			"ID": "4ee03fd74543e3f47e4ddab4d9633089",
 			"TypeName": "FlaxEngine.PointLight",
 			"ParentID": "26962f344e1e30addf9f87b4e3d098e3",
+			"IsActive": false,
 			"Name": "PointLight",
 			"Transform": {
 				"Translation": {
@@ -6909,8 +6886,8 @@
 				"B": 1.0,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"Brightness": 10.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
 			"Radius": 1100.0,
@@ -6922,6 +6899,7 @@
 			"ID": "032817e146e22feace6001aefae5ac04",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "bcecdf634bed700cb2587f84399f963a",
+			"IsActive": false,
 			"Name": "SM_Prop_Light_Fluorescent_7",
 			"Transform": {
 				"Translation": {
@@ -6973,9 +6951,10 @@
 				"A": 1.0
 			},
 			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
+			"Radius": 251.60000610351563,
 			"SourceRadius": 5.0,
 			"SourceLength": 200.0,
 			"FallOffExponent": 16.0
@@ -7035,10 +7014,69 @@
 				"A": 1.0
 			},
 			"Brightness": 5.0,
-			"ShadowsDistance": 0.0,
+			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
-			"Radius": 600.0,
+			"Radius": 371.70001220703125,
+			"SourceRadius": 5.0,
+			"SourceLength": 200.0,
+			"FallOffExponent": 16.0
+		},
+		{
+			"ID": "2f9114564011e2afd46046b8fde37d1d",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "bcecdf634bed700cb2587f84399f963a",
+			"IsActive": false,
+			"Name": "SM_Prop_Light_Fluorescent_4",
+			"Transform": {
+				"Translation": {
+					"X": 111.94709777832031,
+					"Y": 0.0,
+					"Z": -617.4732666015625
+				}
+			},
+			"Model": "c5e82461497aabc11c206e96941aab8d",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "f3dc2c6b467abe50b684f2a55d8d5059",
+			"TypeName": "FlaxEngine.PointLight",
+			"ParentID": "2f9114564011e2afd46046b8fde37d1d",
+			"Name": "PointLight",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -83.93923950195313,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"Color": {
+				"R": 0.665742039680481,
+				"G": 0.9140836000442505,
+				"B": 1.0,
+				"A": 1.0
+			},
+			"Brightness": 5.0,
+			"ShadowsDistance": 800.0,
+			"ShadowsFadeDistance": 7000.0,
+			"ShadowsDepthBias": 0.30000001192092896,
+			"ShadowsUpdateRateAtDistance": 0.5,
+			"Radius": 279.39996337890625,
 			"SourceRadius": 5.0,
 			"SourceLength": 200.0,
 			"FallOffExponent": 16.0
@@ -7074,9 +7112,37 @@
 			}
 		},
 		{
+			"ID": "b7db1449498cdfd3a8691aa1e70460a8",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "4a35a9494b9060056dfca4ba7a4c785c",
+			"Name": "BoxCollider",
+			"Layer": 2,
+			"Center": {
+				"X": -0.000091552734375,
+				"Y": 0.0,
+				"Z": 0.00006103515625
+			},
+			"Size": {
+				"X": 12.172653198242188,
+				"Y": 20.278472900390625,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "496eac224e68ed94b43855aa7983ef47",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "b7db1449498cdfd3a8691aa1e70460a8",
+			"V": {
+	"_LightActor": "bcecdf634bed700cb2587f84399f963a",
+	"_name": "Light Switch",
+	"_collider": "b7db1449498cdfd3a8691aa1e70460a8"
+}
+		},
+		{
 			"ID": "ecbe18024e3b54532cdb2facb2901809",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
+			"IsActive": false,
 			"Name": "MaintenanceRoom",
 			"Transform": {
 				"Translation": {
@@ -8263,6 +8329,21 @@
 			"ParentID": "ccc3279144f0c86b927ab6b14f517dd1",
 			"Name": "Model",
 			"StaticFlags": 0
+		},
+		{
+			"ID": "cb61406e452aca2e18b0f4a80522a90c",
+			"TypeName": "FlaxEngine.EnvironmentProbe",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "EnvironmentProbe",
+			"Transform": {
+				"Translation": {
+					"X": -417.86785888671875,
+					"Y": 133.0584716796875,
+					"Z": 1217.3045654296875
+				}
+			},
+			"Radius": 281.0,
+			"Brightness": 2.0
 		}
 	]
 }

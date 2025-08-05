@@ -262,9 +262,9 @@
 			"MotionVectorsResolution": 2
 		},
 		"SSR": {
-			"OverrideFlags": 0,
+			"OverrideFlags": 32769,
 			"Intensity": 1.0,
-			"TraceMode": 0,
+			"TraceMode": 1,
 			"DepthResolution": 2,
 			"RayTracePassResolution": 2,
 			"BRDFBias": 0.82,
