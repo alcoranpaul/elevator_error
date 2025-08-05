@@ -35,7 +35,7 @@ public class LightSwitch : AInteraction
     {
         _IsOn = !_IsOn;
         _LightActor.IsActive = _IsOn;
-        Debug.Log("Toggle Light: " + _IsOn);
+
     }
 
 

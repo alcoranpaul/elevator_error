@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DigiTalino_Plugin;
 using FlaxEngine;
 
@@ -21,6 +22,10 @@ public class MessManager : InstanceManagerScript
 
     private Actor[] _spawnPositions;
 
+    public event Action OnFloorCleaned;
+
+    private int _dirtyItems;
+
     /// <inheritdoc/>
     public override void OnAwake()
     {
@@ -40,6 +45,7 @@ public class MessManager : InstanceManagerScript
     public override void OnDisable()
     {
         SingletonManager.Get<FloorManager>().OnFloorChangeRequested -= OnFloorChanged;
+        OnFloorCleaned = null;
         base.OnDisable();
     }
 
@@ -69,9 +75,18 @@ public class MessManager : InstanceManagerScript
         {
             Actor spawnPoint = shuffled[i];
             Vector3 position = spawnPoint.Transform.LocalToWorldVector(spawnPoint.Position);
+
+
             // Spawn prefab at position
             Actor instance = PrefabManager.SpawnPrefab(_dirtyItemPrefab, position);
+            if (instance.Children.Length <= 0)
+                Debug.LogError("Dirty item prefab has no children.");
 
+            if (!instance.Children[0].TryGetScript(out IInteract interactScript))
+                Debug.LogError("Dirty item prefab has no interact script.");
+
+            interactScript.OnInteracted += OnDirtyItemInteracted;
+            _dirtyItems++;
 
             // Get a random model from the list
             int randomIndex = random.Next(_dirtyItemModels.Count);
@@ -88,7 +103,14 @@ public class MessManager : InstanceManagerScript
         }
     }
 
+    private void OnDirtyItemInteracted(Actor instigator)
+    {
+        _dirtyItems--;
 
+        if (_dirtyItems > 0)
+            return;
+        OnFloorCleaned?.Invoke();
+    }
 
     private static void Shuffle<T>(IList<T> list)
     {

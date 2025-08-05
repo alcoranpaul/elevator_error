@@ -4185,15 +4185,28 @@
 			}
 		},
 		{
-			"ID": "a1ae512c4730f5bcaf2f72a02bfa3207",
-			"TypeName": "FlaxEngine.StaticModel",
+			"ID": "41557aa345ce566271a80fbd1cf37110",
+			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "3b5adc0a4b32f4e4c0e711a0b8d5610c",
-			"Name": "SM_Prop_Microwave_01",
+			"Name": "EmptyActor",
 			"Transform": {
 				"Translation": {
 					"X": -7.5049591064453125,
-					"Y": 11.644157409667969,
+					"Y": 25.89996337890625,
 					"Z": 35.266357421875
+				}
+			}
+		},
+		{
+			"ID": "a1ae512c4730f5bcaf2f72a02bfa3207",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "41557aa345ce566271a80fbd1cf37110",
+			"Name": "SM_Prop_Microwave_01",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": -14.255805969238281,
+					"Z": 0.0
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -4217,13 +4230,13 @@
 		{
 			"ID": "a963140d4591ac0561922e8365c2c967",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "3b5adc0a4b32f4e4c0e711a0b8d5610c",
+			"ParentID": "41557aa345ce566271a80fbd1cf37110",
 			"Name": "SM_Prop_Microwave_2",
 			"Transform": {
 				"Translation": {
-					"X": -7.5049591064453125,
-					"Y": 40.15577697753906,
-					"Z": 35.266357421875
+					"X": 0.0,
+					"Y": 14.255813598632813,
+					"Z": 0.0
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -4242,6 +4255,22 @@
 						"ReceiveDecals": true
 					}
 				]
+			}
+		},
+		{
+			"ID": "d15fb7b7417e3078541c8db8c2b67f14",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "41557aa345ce566271a80fbd1cf37110",
+			"Name": "BoxCollider",
+			"Center": {
+				"X": 1.75653076171875,
+				"Y": 14.254119873046875,
+				"Z": -0.0164794921875
+			},
+			"Size": {
+				"X": 47.1474609375,
+				"Y": 57.108062744140625,
+				"Z": 57.0506591796875
 			}
 		},
 		{
@@ -4275,6 +4304,22 @@
 			}
 		},
 		{
+			"ID": "748309144e9b9bda9ed265833c7cf7ba",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "a892ba74437806aa6e9be4b9277eff32",
+			"Name": "BoxCollider",
+			"Center": {
+				"X": 0.000030517578125,
+				"Y": 37.5,
+				"Z": 0.0
+			},
+			"Size": {
+				"X": 195.80535888671875,
+				"Y": 75.0,
+				"Z": 88.476806640625
+			}
+		},
+		{
 			"ID": "44ac3ce64a5982143526f4913c5e7a38",
 			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "3b5adc0a4b32f4e4c0e711a0b8d5610c",
@@ -4305,19 +4350,19 @@
 			}
 		},
 		{
-			"ID": "e941e8a0474d2a31b9ed139986c4e688",
+			"ID": "2ba0508244e63364fe38c4b7468ebd2a",
 			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "3b5adc0a4b32f4e4c0e711a0b8d5610c",
+			"ParentID": "44ac3ce64a5982143526f4913c5e7a38",
 			"Name": "BoxCollider",
 			"Center": {
-				"X": 12.013351440429688,
-				"Y": 14.935714721679688,
-				"Z": -18.99853515625
+				"X": 0.0,
+				"Y": 40.83567810058594,
+				"Z": 9.46923828125
 			},
 			"Size": {
-				"X": 90.65565490722656,
-				"Y": 156.67135620117188,
-				"Z": 195.805419921875
+				"X": 103.85989379882813,
+				"Y": 81.67135620117188,
+				"Z": 87.57177734375
 			}
 		},
 		{
@@ -4543,9 +4588,9 @@
 			"Name": "SM_Prop_Chair_9",
 			"Transform": {
 				"Translation": {
-					"X": 92.00906372070313,
+					"X": 68.29025268554688,
 					"Y": 0.000012715656339423731,
-					"Z": -113.27716064453125
+					"Z": -133.72161865234375
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -4823,7 +4868,7 @@
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "8e4fb2994ce62cd3eb85c28606718bb4",
+						"Material": "00000000000000000000000000000000",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -7610,23 +7655,6 @@
 			"CollisionData": "ef9e4fe84c7078c12a93109b8d7c5e73"
 		},
 		{
-			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "PlayerController",
-			"StaticFlags": 0
-		},
-		{
-			"ID": "db54c7c1420e7862061935ab251f9e3c",
-			"TypeName": "DigiTalino_Plugin.PlayerController",
-			"ParentID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
-			"V": {
-	"_pawnPossessionArgs": {
-		"FPSPawn": "2416025f4bddb296b724ac962539c751"
-	}
-}
-		},
-		{
 			"ID": "e30517084e6fd4a1dba54689f7433047",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -8269,6 +8297,23 @@
 			"OuterAngle": 89.0,
 			"InnerAngle": 38.80000305175781,
 			"IESTexture": "1ba4c5e94790903bd5d2eeaa706b00cb"
+		},
+		{
+			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "PlayerController",
+			"StaticFlags": 0
+		},
+		{
+			"ID": "db54c7c1420e7862061935ab251f9e3c",
+			"TypeName": "DigiTalino_Plugin.PlayerController",
+			"ParentID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
+			"V": {
+	"_pawnPossessionArgs": {
+		"FPSPawn": "2416025f4bddb296b724ac962539c751"
+	}
+}
 		},
 		{
 			"ID": "ccc3279144f0c86b927ab6b14f517dd1",

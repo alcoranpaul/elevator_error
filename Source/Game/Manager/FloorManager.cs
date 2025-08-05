@@ -51,10 +51,17 @@ public class FloorManager : InstanceManagerScript
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
     }
 
+    public override void OnStart()
+    {
+        SingletonManager.Get<MessManager>().OnFloorCleaned += OnFloorCleaned;
+    }
+
+
     /// <inheritdoc/>
     public override void OnDisable()
     {
         _buttonPanel.OnFloorAdvanceRequested -= OnFloorAdvanceRequested;
+        SingletonManager.Get<MessManager>().OnFloorCleaned -= OnFloorCleaned;
         base.OnDisable();
     }
 
@@ -178,4 +185,10 @@ public class FloorManager : InstanceManagerScript
             return true;
         return _currentFloor.IsCleaned;
     }
+
+    private void OnFloorCleaned()
+    {
+        _currentFloor.IsCleaned = true;
+    }
+
 }
