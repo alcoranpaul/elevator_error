@@ -35,16 +35,13 @@ public class FloorLevelUI : Script
 
     private void OnFloorChanged(int obj)
     {
-        if (obj <= 0) Debug.LogError("Floor number should be greater than 0");
-
-
         _floorLevel = obj;
 
     }
 
     private void OnButtonPanel_OnElevatorStopped()
     {
-        if (_floorLevel == 0)
+        if (_floorLevel <= 0)
             _floorLabel.Text = GROUND_FLOOR;
         else
             _floorLabel.Text = $"{_floorLevel}";

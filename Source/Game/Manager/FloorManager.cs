@@ -50,7 +50,6 @@ public class FloorManager : InstanceManagerScript
 
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
     }
-
     public override void OnStart()
     {
         SingletonManager.Get<MessManager>().OnFloorCleaned += OnFloorCleaned;
@@ -66,26 +65,6 @@ public class FloorManager : InstanceManagerScript
     }
 
     /// <summary>
-    /// Handler called when the elevator requests to advance to the next floor.
-    /// Checks if the current floor is cleaned before allowing progression.
-    /// </summary>
-    /// <returns>True if the floor was changed; false if the current floor is not cleaned.</returns>
-    private bool OnFloorAdvanceRequested()
-    {
-        if (IsCurrentFloorCleaned())
-        {
-            GoToNextFloor();
-            OnFloorChangeRequested?.Invoke(FindFloorNumber(_currentFloor) + 1);
-            return true;
-        }
-        else
-        {
-            Debug.Log("Floor is not cleaned!");
-            return false;
-        }
-    }
-
-    /// <summary>
     /// Initializes the floors and assigns random anomalies to some floors.
     /// </summary>
     private void InitializeFloors()
@@ -94,21 +73,68 @@ public class FloorManager : InstanceManagerScript
         {
             FloorData floor = new();
 
-            // 40% chance to add an anomaly to this floor
-            if (Random.Shared.NextDouble() < 0.4)
-            {
-                AnomalyData anomaly = new AnomalyData()
-                {
-                    type = GetRandomVisualAnomaly(),
-                    trigger = GetRandomTrigger(),
-                    isTriggered = false
-                };
-                floor.Anomalies = [anomaly];
-            }
+            // // 40% chance to add an anomaly to this floor
+            // if (Random.Shared.NextDouble() < 0.4f)
+            // {
+            //     AnomalyData anomaly = new AnomalyData()
+            //     {
+            //         type = GetRandomVisualAnomaly(),
+            //         trigger = GetRandomTrigger(),
+            //         isTriggered = false
+            //     };
+            //     floor.Anomalies = [anomaly];
+            //     Debug.Log($"Floor {i} has anomaly: {anomaly.type}");
+            // }
 
             _floors[i] = floor;
         }
     }
+
+    /// <summary>
+    /// Handles elevator request to advance to the next floor.
+    /// Checks if the current floor is cleaned before allowing movement.
+    /// </summary>
+    /// <param name="direction">Requested direction of movement.</param>
+    /// <returns>True if the floor was changed; false if not cleaned.</returns>
+    private bool OnFloorAdvanceRequested(ButtonPanel.Direction direction)
+    {
+        if (_currentFloor == null) // Ground floor start
+        {
+            GoToNextFloor();
+            OnFloorChangeRequested?.Invoke(1);
+            return true;
+        }
+
+        if (!IsCurrentFloorCleaned())
+        {
+            Debug.Log("Floor is not cleaned!");
+            SingletonManager.Get<MessageManager>().ShowMessage("Floor is not cleaned!");
+            return false;
+        }
+
+        bool hasAnomaly = _currentFloor.HasAnomaly;
+        Debug.Log($"Floor has anomaly: {hasAnomaly}, Direction: {direction}");
+
+        bool isGoingDown = direction == ButtonPanel.Direction.Down;
+        bool isGoingUp = direction == ButtonPanel.Direction.Up;
+
+        // Logic to decide floor movement
+        if ((!hasAnomaly && isGoingDown) || (hasAnomaly && isGoingUp))
+        {
+            GoToGroundFloor();
+            OnFloorChangeRequested?.Invoke(-1);
+        }
+        else if ((hasAnomaly && isGoingDown) || (!hasAnomaly && isGoingUp))
+        {
+            GoToNextFloor();
+            OnFloorChangeRequested?.Invoke(FindFloorNumber(_currentFloor) + 1);
+        }
+
+        return true;
+    }
+
+
+
 
     /// <summary>
     /// Moves the current floor pointer to the next floor.
@@ -119,13 +145,31 @@ public class FloorManager : InstanceManagerScript
         if (_currentFloor == null)
         {
             _currentFloor = _floors[0];
+            return;
         }
-        else
+
+        int currentIndex = FindFloorNumber(_currentFloor);
+        int nextIndex = currentIndex + 1;
+
+        if (nextIndex >= _floors.Length)
         {
-            int currentFloorNumber = FindFloorNumber(_currentFloor);
-            _currentFloor = _floors[currentFloorNumber + 1];
+            Debug.Log("All floors have been cleaned!");
+            return;
         }
+
+        _currentFloor = _floors[nextIndex];
+        _currentFloor.IsCleaned = false;
+        _currentFloor.HasAnomaly = false;
     }
+
+    /// <summary>
+    /// Moves the current floor pointer to the first floor.
+    /// </summary>
+    private void GoToGroundFloor()
+    {
+        _currentFloor = null;
+    }
+
 
     /// <summary>
     /// Finds the index of the specified floor data in the floors array.

@@ -68,6 +68,11 @@ public class MessManager : InstanceManagerScript
 
     private void OnFloorChanged(int floor)
     {
+        if (floor < 0)
+        {
+            _spawnCount = -1;
+            return;
+        }
         if (_bezierCurve == null)
         {
             Debug.LogError("Bezier curve is null");
@@ -82,7 +87,8 @@ public class MessManager : InstanceManagerScript
 
     private void SpawnItems(int numberOfDirtyItems)
     {
-
+        if (numberOfDirtyItems < 0)
+            return;
 
         if (_dirtyItemModels == null || _dirtyItemModels.Count == 0)
         {

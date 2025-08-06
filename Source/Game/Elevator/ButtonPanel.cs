@@ -10,7 +10,7 @@ namespace Game;
 /// </summary>
 public class ButtonPanel : InstanceManagerScript
 {
-    public event Func<bool> OnFloorAdvanceRequested;
+    public event Func<Direction, bool> OnFloorAdvanceRequested;
 
     public event Action OnElevatorStoppedVibrating;
     [ShowInEditor, Serialize] private Actor _elevatorActor;
@@ -142,7 +142,7 @@ public class ButtonPanel : InstanceManagerScript
 
         if (_state != State.Idle) return;
 
-        if (OnFloorAdvanceRequested?.Invoke() == false) return;
+        if (OnFloorAdvanceRequested?.Invoke(Direction.Up) == false) return;
 
         if (_doorState == DoorState.Open)
         {
@@ -164,6 +164,8 @@ public class ButtonPanel : InstanceManagerScript
     private void OnGoDownButtonInteracted(Actor actor)
     {
         if (_state != State.Idle) return;
+
+        if (OnFloorAdvanceRequested?.Invoke(Direction.Down) == false) return;
 
         if (_doorState == DoorState.Open)
         {
@@ -270,6 +272,12 @@ public class ButtonPanel : InstanceManagerScript
         Closing,
         GoingUp,
         GoingDown
+    }
+
+    public enum Direction
+    {
+        Up,
+        Down
     }
 
     private enum DoorState

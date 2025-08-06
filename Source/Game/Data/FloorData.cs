@@ -15,7 +15,7 @@ public class FloorData
     /// <summary>
     /// Is floor has anomaly
     /// </summary>
-    public bool hasAnomaly;
+    public bool HasAnomaly;
 
     public List<AnomalyData> Anomalies;
 }
