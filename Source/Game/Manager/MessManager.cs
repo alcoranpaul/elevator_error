@@ -13,38 +13,55 @@ namespace Game;
 public class MessManager : InstanceManagerScript
 {
 
-    [ShowInEditor, Serialize] private Actor _officeDesktopPositions;
+    [ShowInEditor, Serialize] private List<Actor> _messPositionActors = new List<Actor>();
     [ShowInEditor, Serialize] private Prefab _dirtyItemPrefab;
 
     [ShowInEditor, Serialize] private List<Model> _dirtyItemModels;
 
     [ShowInEditor, Serialize] private BezierCurve<float> _bezierCurve;
 
-    private Actor[] _spawnPositions;
+    private List<Vector3> _spawnPositions;
 
     public event Action OnFloorCleaned;
 
     private int _dirtyItems;
+
+    private int _spawnCount;
 
     /// <inheritdoc/>
     public override void OnAwake()
     {
         base.OnAwake(); // Do not remove since it is required
 
-        if (_officeDesktopPositions == null || _officeDesktopPositions.ChildrenCount <= 0)
-            Debug.LogError("Office desktop positions are null or empty");
 
-        _spawnPositions = _officeDesktopPositions.Children;
+        _spawnPositions = new List<Vector3>();
+
+
+        foreach (Actor item in _messPositionActors)
+        {
+
+            if (item.ChildrenCount == 0)
+                continue;
+            foreach (Actor child in item.Children)
+                _spawnPositions.Add(child.Position);
+        }
+
+
+
     }
 
     public override void OnStart()
     {
         SingletonManager.Get<FloorManager>().OnFloorChangeRequested += OnFloorChanged;
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating += SpawnMess;
     }
+
+
 
     public override void OnDisable()
     {
         SingletonManager.Get<FloorManager>().OnFloorChangeRequested -= OnFloorChanged;
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating -= SpawnMess;
         OnFloorCleaned = null;
         base.OnDisable();
     }
@@ -58,7 +75,14 @@ public class MessManager : InstanceManagerScript
         }
 
         _bezierCurve.Evaluate(out float result, floor);
-        int numberOfDirtyItems = Mathf.Clamp(Mathf.RoundToInt(result), 0, _spawnPositions.Length);
+        _spawnCount = Mathf.Clamp(Mathf.RoundToInt(result), 0, _spawnPositions.Count);
+
+
+    }
+
+    private void SpawnItems(int numberOfDirtyItems)
+    {
+
 
         if (_dirtyItemModels == null || _dirtyItemModels.Count == 0)
         {
@@ -66,16 +90,14 @@ public class MessManager : InstanceManagerScript
             return;
         }
 
-        List<Actor> shuffled = new(_spawnPositions);
+        List<Vector3> shuffled = new(_spawnPositions);
         Shuffle(shuffled);
 
         Random random = new Random();
 
         for (int i = 0; i < numberOfDirtyItems; i++)
         {
-            Actor spawnPoint = shuffled[i];
-            Vector3 position = spawnPoint.Transform.LocalToWorldVector(spawnPoint.Position);
-
+            Vector3 position = shuffled[i];
 
             // Spawn prefab at position
             Actor instance = PrefabManager.SpawnPrefab(_dirtyItemPrefab, position);
@@ -101,6 +123,11 @@ public class MessManager : InstanceManagerScript
             Level.SpawnActor(staticModel, instance);
             staticModel.LocalPosition = Vector3.Zero;
         }
+    }
+
+    private void SpawnMess()
+    {
+        SpawnItems(_spawnCount);
     }
 
     private void OnDirtyItemInteracted(Actor instigator)
