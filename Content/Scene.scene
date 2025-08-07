@@ -890,7 +890,11 @@
 					"TraceMode": 1
 				},
 				"AA": {},
-				"PostFxMaterials": {}
+				"PostFxMaterials": {
+					"Materials": [
+						"d14ce41149fa55b2a7186ba67fc4f05c"
+					]
+				}
 			}
 		},
 		{
@@ -6559,7 +6563,7 @@
 			"Name": "SM_Prop_VendingMachine_01",
 			"Transform": {
 				"Translation": {
-					"X": 179.88919067382813,
+					"X": 176.76956176757813,
 					"Y": -35.58402633666992,
 					"Z": -140.10650634765625
 				},
@@ -7873,19 +7877,19 @@
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					},
-					{
 						"Material": "1e2eb7a441bd338ad2a41c93291c5651",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
 					},
 					{
-						"Material": "b445f3b84aadcd142a73e08d616b54ad",
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					},
+					{
+						"Material": "476dcc11498401f14d9f58ac1dd5207c",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -9584,6 +9588,580 @@
 			"StaticFlags": 0,
 			"Buffer": {
 				"Entries": []
+			}
+		},
+		{
+			"ID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "Anomalies",
+			"Transform": {
+				"Translation": {
+					"X": -1.9859144687652588,
+					"Y": -28.705793380737305,
+					"Z": 892.425048828125
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "1eeca3c449beacc5dc606bbffc184ce3",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Skeleton",
+			"Transform": {
+				"Translation": {
+					"X": -2.5663468837738037,
+					"Y": 30.06245231628418,
+					"Z": 606.0576171875
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.9890158772468567,
+					"Z": 0.0,
+					"W": 0.1478094756603241
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "7d7f95bf4604fa41d4d0d4813b242164",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Skeleton 0",
+			"Transform": {
+				"Translation": {
+					"X": 19.01441764831543,
+					"Y": -588.4066162109375,
+					"Z": 906.4903564453125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				},
+				"Scale": {
+					"X": 5.0,
+					"Y": 5.0,
+					"Z": 5.0
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "faa81e7a4a2faf38098fb58f8fff61e5",
+			"TypeName": "FlaxEngine.SpotLight",
+			"ParentID": "7d7f95bf4604fa41d4d0d4813b242164",
+			"Name": "SpotLight",
+			"Transform": {
+				"Translation": {
+					"X": -0.0000017277524193559657,
+					"Y": 188.2451629638672,
+					"Z": 19.76318359375
+				},
+				"Orientation": {
+					"X": 0.8703557252883911,
+					"Y": -1.651994274709523e-8,
+					"Z": -1.651994274709523e-8,
+					"W": 0.49242350459098816
+				}
+			},
+			"StaticFlags": 0,
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 0.009743690490722656,
+				"A": 1.0
+			},
+			"Brightness": 20.0,
+			"Radius": 1500.0,
+			"OuterAngle": 50.0
+		},
+		{
+			"ID": "a9c7846e4cb1022b095595bf539ffa05",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Skeleton 1",
+			"Transform": {
+				"Translation": {
+					"X": -861.9722290039063,
+					"Y": 30.06245231628418,
+					"Z": -694.3184204101563
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "cefb81354d0b971580e54c89bfaff0d9",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Skeleton 2",
+			"Transform": {
+				"Translation": {
+					"X": -861.9722290039063,
+					"Y": 30.06245231628418,
+					"Z": -427.8258361816406
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "9e1610f24d368bc4e1fde88ee2751578",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Skeleton 3",
+			"Transform": {
+				"Translation": {
+					"X": 367.36761474609375,
+					"Y": 30.06245231628418,
+					"Z": 376.6646728515625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": -0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "361329b54288cf55c29abd9217425b0e",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "1429f18347d9e3f1590becaecfb090d3",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Shackles_02",
+			"Transform": {
+				"Translation": {
+					"X": -281.0603942871094,
+					"Y": 61.96534729003906,
+					"Z": -631.2920532226563
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "59d9a67a4278879d5a4e5c9b0b8dedfb",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "8e05eeeb4fbafafdb7f646a0dcf6b81e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Lying_01",
+			"Transform": {
+				"Translation": {
+					"X": -244.54483032226563,
+					"Y": 34.447959899902344,
+					"Z": -554.131103515625
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "fab113204f7c5a1fa768e1869ffd0bc2",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "e38a9a7945faae0dc6974287a9e6d16e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Table_02",
+			"Transform": {
+				"Translation": {
+					"X": 536.7611694335938,
+					"Y": 30.953655242919922,
+					"Z": -656.9737548828125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "9e246a3641511107c6599c9c3844b6c3",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "2590f24549839511fba016baa073fdb6",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Table_3",
+			"Transform": {
+				"Translation": {
+					"X": 536.7611694335938,
+					"Y": 30.953655242919922,
+					"Z": -346.6297607421875
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "9e246a3641511107c6599c9c3844b6c3",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ade5c3884725bce87738648db02f3763",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Table_01",
+			"Transform": {
+				"Translation": {
+					"X": 512.2189331054688,
+					"Y": 38.85028076171875,
+					"Z": -170.06719970703125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7193397879600525,
+					"Z": 0.0,
+					"W": 0.6946583986282349
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "48de68bd400bff8ca4b548a4fbab7118",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ac7e19154e39b6dee1a588a5306a9199",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Table_2",
+			"Transform": {
+				"Translation": {
+					"X": 531.7066040039063,
+					"Y": 38.85028076171875,
+					"Z": 69.63031005859375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7193397879600525,
+					"Z": 0.0,
+					"W": 0.6946583986282349
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "48de68bd400bff8ca4b548a4fbab7118",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "9ea93a9749894cab8736508ca8ad9ccd",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Wall_Sitting_01",
+			"Transform": {
+				"Translation": {
+					"X": 476.7679443359375,
+					"Y": 32.42548370361328,
+					"Z": 165.916748046875
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "d5ca2ffd427dd6f3dc79208c321c0854",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "d49ed60843f22da790b65689c92b9788",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_01",
+			"Transform": {
+				"Translation": {
+					"X": 212.80450439453125,
+					"Y": 28.705747604370117,
+					"Z": 551.9090576171875
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "0d7138624aed508e58cd25b82cb6f668",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "d290626744820d4fe5405088e78dc578",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Cage_2",
+			"Transform": {
+				"Translation": {
+					"X": 213.31138610839844,
+					"Y": 49.845176696777344,
+					"Z": -322.26910400390625
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "7a69325c4b73b4f0460af2bd8932a61c",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "e13491fa4df53c020cc7f4b53f72614c",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_2",
+			"Transform": {
+				"Translation": {
+					"X": -678.5298461914063,
+					"Y": 26.13166618347168,
+					"Z": 268.4156494140625
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "0d7138624aed508e58cd25b82cb6f668",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "72b6cd65448c7872dcb48593ca1dfda1",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Lying_2",
+			"Transform": {
+				"Translation": {
+					"X": -648.274169921875,
+					"Y": 34.447898864746094,
+					"Z": 460.864013671875
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "fab113204f7c5a1fa768e1869ffd0bc2",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "31af53f045c5e25db4672b8dc8648dd3",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_3",
+			"Transform": {
+				"Translation": {
+					"X": 84.21968078613281,
+					"Y": 26.13166618347168,
+					"Z": 306.3916015625
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "0d7138624aed508e58cd25b82cb6f668",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "73e83f8d4512e17a01ca4dbb1e575ee9",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Lying_3",
+			"Transform": {
+				"Translation": {
+					"X": 87.98646545410156,
+					"Y": 34.447898864746094,
+					"Z": 91.167236328125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "fab113204f7c5a1fa768e1869ffd0bc2",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
 			}
 		}
 	]
