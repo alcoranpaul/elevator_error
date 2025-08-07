@@ -8563,6 +8563,48 @@
 			"IESTexture": "1ba4c5e94790903bd5d2eeaa706b00cb"
 		},
 		{
+			"ID": "f9ec3e844b423186ecf454a069fbf1b1",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "e30517084e6fd4a1dba54689f7433047",
+			"Name": "elevator2 SM_Bld_Elevator_01.005",
+			"StaticFlags": 0,
+			"Model": "858e1e1d47797a6b9e63bfb084347289",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "cbfd4c2e4ca05d2938a5cc8b97b38e9c",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ae2c6982476e7a52969cb3a2949990d7",
+			"TypeName": "FlaxEngine.SpriteRender",
+			"ParentID": "f9ec3e844b423186ecf454a069fbf1b1",
+			"Name": "SpriteRender",
+			"Transform": {
+				"Translation": {
+					"X": -111.22692108154297,
+					"Y": 186.45921325683594,
+					"Z": 85.88846588134766
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"Sprite": {},
+			"Image": "8ec073c24bbaa26519053fb246fbb4c8",
+			"Material": "6542187d40386b3768d0818d98dbd63a",
+			"FaceCamera": false,
+			"DrawModes": 126
+		},
+		{
 			"ID": "dbd0f76640db1c4eb8b326aaaeb88d4e",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
