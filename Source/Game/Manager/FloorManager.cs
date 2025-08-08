@@ -22,6 +22,8 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     [ShowInEditor, Serialize] private ButtonPanel _buttonPanel;
 
+    [ShowInEditor, Serialize] private SkyLight _skyLight;
+
     /// <summary>
     /// Array holding data for each floor.
     /// </summary>
@@ -40,13 +42,15 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private const int FLOOR_COUNT = 5;
 
+
+
     /// <inheritdoc/>
     public override void OnAwake()
     {
         base.OnAwake();
         _floors = new FloorData[FLOOR_COUNT];
         InitializeFloors();
-        _currentFloor = null;
+        GoToGroundFloor();
 
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
     }
@@ -72,20 +76,6 @@ public class FloorManager : InstanceManagerScript
         for (int i = 0; i < FLOOR_COUNT; i++)
         {
             FloorData floor = new();
-
-            // // 40% chance to add an anomaly to this floor
-            // if (Random.Shared.NextDouble() < 0.4f)
-            // {
-            //     AnomalyData anomaly = new AnomalyData()
-            //     {
-            //         type = GetRandomVisualAnomaly(),
-            //         trigger = GetRandomTrigger(),
-            //         isTriggered = false
-            //     };
-            //     floor.Anomalies = [anomaly];
-            //     Debug.Log($"Floor {i} has anomaly: {anomaly.type}");
-            // }
-
             _floors[i] = floor;
         }
     }
@@ -127,6 +117,7 @@ public class FloorManager : InstanceManagerScript
         else if ((hasAnomaly && isGoingDown) || (!hasAnomaly && isGoingUp))
         {
             GoToNextFloor();
+
             OnFloorChangeRequested?.Invoke(FindFloorNumber(_currentFloor) + 1);
         }
 
@@ -142,6 +133,8 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private void GoToNextFloor()
     {
+        _skyLight.Brightness = 0.6f;
+
         if (_currentFloor == null)
         {
             _currentFloor = _floors[0];
@@ -160,6 +153,8 @@ public class FloorManager : InstanceManagerScript
         _currentFloor = _floors[nextIndex];
         _currentFloor.IsCleaned = false;
         _currentFloor.HasAnomaly = false;
+
+
     }
 
     /// <summary>
@@ -168,6 +163,7 @@ public class FloorManager : InstanceManagerScript
     private void GoToGroundFloor()
     {
         _currentFloor = null;
+        _skyLight.Brightness = 3f;
     }
 
 
