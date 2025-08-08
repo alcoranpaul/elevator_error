@@ -3510,6 +3510,7 @@
 			"V": {
 	"_LightActor": "7538b8d74bf3a5aeac02f5a88f4216e2",
 	"_name": "Light Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
 	"_collider": "fc5953094b8d0fad8b9ce0a41ff9c974"
 }
 		},
@@ -7763,20 +7764,19 @@
 				}
 			},
 			"Color": {
-				"R": 0.665742039680481,
-				"G": 0.9140836000442505,
-				"B": 1.0,
+				"R": 0.5215686559677124,
+				"G": 0.46666666865348816,
+				"B": 0.4313725531101227,
 				"A": 1.0
 			},
-			"Brightness": 5.0,
+			"Brightness": 2.5,
 			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 7000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
 			"ShadowsUpdateRateAtDistance": 0.5,
 			"Radius": 279.39996337890625,
 			"SourceRadius": 5.0,
-			"SourceLength": 200.0,
-			"FallOffExponent": 16.0
+			"SourceLength": 200.0
 		},
 		{
 			"ID": "4a35a9494b9060056dfca4ba7a4c785c",
@@ -7832,6 +7832,7 @@
 			"V": {
 	"_LightActor": "bcecdf634bed700cb2587f84399f963a",
 	"_name": "Light Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
 	"_collider": "b7db1449498cdfd3a8691aa1e70460a8"
 }
 		},

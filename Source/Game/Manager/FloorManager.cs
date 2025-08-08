@@ -51,9 +51,19 @@ public class FloorManager : InstanceManagerScript
         _floors = new FloorData[FLOOR_COUNT];
         InitializeFloors();
         GoToGroundFloor();
-
+        _skyLight.Brightness = 3f;
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
+        _buttonPanel.OnElevatorStoppedVibrating += OnElevatorStoppedVibrating;
     }
+
+    private void OnElevatorStoppedVibrating()
+    {
+        if (_currentFloor == null)
+            _skyLight.Brightness = 3f;
+        else
+            _skyLight.Brightness = 0.7f;
+    }
+
     public override void OnStart()
     {
         SingletonManager.Get<MessManager>().OnFloorCleaned += OnFloorCleaned;
@@ -65,6 +75,7 @@ public class FloorManager : InstanceManagerScript
     {
         _buttonPanel.OnFloorAdvanceRequested -= OnFloorAdvanceRequested;
         SingletonManager.Get<MessManager>().OnFloorCleaned -= OnFloorCleaned;
+        _buttonPanel.OnElevatorStoppedVibrating -= OnElevatorStoppedVibrating;
         base.OnDisable();
     }
 
@@ -133,8 +144,6 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private void GoToNextFloor()
     {
-        _skyLight.Brightness = 0.6f;
-
         if (_currentFloor == null)
         {
             _currentFloor = _floors[0];
@@ -163,7 +172,7 @@ public class FloorManager : InstanceManagerScript
     private void GoToGroundFloor()
     {
         _currentFloor = null;
-        _skyLight.Brightness = 3f;
+
     }
 
 

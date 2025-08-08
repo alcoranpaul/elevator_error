@@ -33,6 +33,7 @@
 		"ParentID": "140266ed49b5ce3387a6c6ab5bc2989d",
 		"V": {
 	"_name": "Used Cup",
+	"_interactionSound": "6f38b748456d198b20ef1e95999a12fa",
 	"_collider": "140266ed49b5ce3387a6c6ab5bc2989d"
 }
 	}
