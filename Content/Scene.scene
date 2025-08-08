@@ -58,7 +58,18 @@
 			"V": {
 	"_buttonPanel": "13d4a0f1410d4d65f5be7eba3384aec3",
 	"_skyLight": "de77f8454717e0266582d59246ad7a00",
-	"_cannotProceedSound": "ce5215664b00efffe8450aa41d41f019"
+	"_cannotProceedSound": "ce5215664b00efffe8450aa41d41f019",
+	"_cannotProceedCameraShakeEvent": {
+		"Magnitude": 7.0,
+		"Duration": 0.5,
+		"Frequency": 15.0,
+		"Deviation": 0.5,
+		"Direction": {
+			"X": 0.0,
+			"Y": 0.0,
+			"Z": 0.0
+		}
+	}
 }
 		},
 		{

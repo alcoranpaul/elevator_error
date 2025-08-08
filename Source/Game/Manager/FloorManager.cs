@@ -26,6 +26,8 @@ public class FloorManager : InstanceManagerScript
 
     [ShowInEditor, Serialize] private AudioClip _cannotProceedSound;
 
+    [ShowInEditor, Serialize] private CameraShakeEvent _cannotProceedCameraShakeEvent;
+
     /// <summary>
     /// Array holding data for each floor.
     /// </summary>
@@ -112,7 +114,7 @@ public class FloorManager : InstanceManagerScript
         {
             SingletonManager.Get<MessageManager>().ShowMessage("Floor is not cleaned!");
             SingletonManager.Get<AudioManager>().PlaySFXClip(_cannotProceedSound, true);
-            SingletonManager.Get<EventManager>().Publish<CameraShakeEvent>(new(10f, 0.5f));
+            SingletonManager.Get<EventManager>().Publish<CameraShakeEvent>(_cannotProceedCameraShakeEvent);
             return false;
         }
 
