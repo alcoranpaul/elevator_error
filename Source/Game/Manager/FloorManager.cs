@@ -24,6 +24,8 @@ public class FloorManager : InstanceManagerScript
 
     [ShowInEditor, Serialize] private SkyLight _skyLight;
 
+    [ShowInEditor, Serialize] private AudioClip _cannotProceedSound;
+
     /// <summary>
     /// Array holding data for each floor.
     /// </summary>
@@ -110,6 +112,7 @@ public class FloorManager : InstanceManagerScript
         {
             Debug.Log("Floor is not cleaned!");
             SingletonManager.Get<MessageManager>().ShowMessage("Floor is not cleaned!");
+            SingletonManager.Get<AudioManager>().PlaySFXClip(_cannotProceedSound, true);
             return false;
         }
 
@@ -137,21 +140,13 @@ public class FloorManager : InstanceManagerScript
 
 
 
-
     /// <summary>
     /// Moves the current floor pointer to the next floor.
     /// If no current floor is set, it starts at the first floor.
     /// </summary>
     private void GoToNextFloor()
     {
-        if (_currentFloor == null)
-        {
-            _currentFloor = _floors[0];
-            return;
-        }
-
-        int currentIndex = FindFloorNumber(_currentFloor);
-        int nextIndex = currentIndex + 1;
+        int nextIndex = _currentFloor == null ? 0 : FindFloorNumber(_currentFloor) + 1;
 
         if (nextIndex >= _floors.Length)
         {
@@ -162,9 +157,8 @@ public class FloorManager : InstanceManagerScript
         _currentFloor = _floors[nextIndex];
         _currentFloor.IsCleaned = false;
         _currentFloor.HasAnomaly = false;
-
-
     }
+
 
     /// <summary>
     /// Moves the current floor pointer to the first floor.
