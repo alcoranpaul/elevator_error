@@ -110,9 +110,9 @@ public class FloorManager : InstanceManagerScript
 
         if (!IsCurrentFloorCleaned())
         {
-            Debug.Log("Floor is not cleaned!");
             SingletonManager.Get<MessageManager>().ShowMessage("Floor is not cleaned!");
             SingletonManager.Get<AudioManager>().PlaySFXClip(_cannotProceedSound, true);
+            SingletonManager.Get<EventManager>().Publish<CameraShakeEvent>(new(10f, 0.5f));
             return false;
         }
 

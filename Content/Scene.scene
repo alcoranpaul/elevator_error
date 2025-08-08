@@ -18,6 +18,22 @@
 			}
 		},
 		{
+			"ID": "ba70f965490c64538e47adac73c85760",
+			"TypeName": "DigiTalino_Plugin.EventManager",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {}
+		},
+		{
+			"ID": "ee5b150c481343d2be419faf2845ba76",
+			"TypeName": "Game.MessageManager",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"V": {
+	"_messageContainer": "7cf7843949e129ced8e01ea0cb5aa90f",
+	"_messageControl": "3a66ab5c48cef7013528f285ecf0c85a",
+	"_messageAnimation": "9f1f359c414fdded748f309df237d30e"
+}
+		},
+		{
 			"ID": "753c9c44416cf812f613e19d6c999ffc",
 			"TypeName": "DigiTalino_Plugin.InputManager",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
@@ -89,16 +105,6 @@
 			}
 		]
 	}
-}
-		},
-		{
-			"ID": "ee5b150c481343d2be419faf2845ba76",
-			"TypeName": "Game.MessageManager",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {
-	"_messageContainer": "7cf7843949e129ced8e01ea0cb5aa90f",
-	"_messageControl": "3a66ab5c48cef7013528f285ecf0c85a",
-	"_messageAnimation": "9f1f359c414fdded748f309df237d30e"
 }
 		},
 		{
@@ -9159,7 +9165,10 @@
 		"Model": "034bdb5d43a25caa18d9bc8813b769e4",
 		"ZoomInFOV": 20.0,
 		"ZoomingDuration": 1.0,
-		"ZoomOutDuration": 0.5
+		"ZoomOutDuration": 0.5,
+		"CameraShakeArgument": {
+			"SpringArm": "74d9b4f44fce9c5398dae5872cbdb7db"
+		}
 	},
 	"_movementComponentArgs": {
 		"MovementSpeed": 275.59464,
