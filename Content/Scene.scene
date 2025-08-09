@@ -49,7 +49,9 @@
 			"ID": "4dcf344747e635755592f69e9664f8c6",
 			"TypeName": "DigiTalino_Plugin.AudioManager",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"V": {}
+			"V": {
+	"_bgm": "483218a64d5a9b5d384cacbe5bd50758"
+}
 		},
 		{
 			"ID": "dd226c03495efdb096a01f9e1a54ddd1",
@@ -908,7 +910,7 @@
 			"Name": "Label",
 			"Transform": {
 				"Translation": {
-					"X": 49.9998779296875,
+					"X": -1.61419677734375,
 					"Y": 120.34243774414063,
 					"Z": 0.0
 				}
@@ -1059,6 +1061,21 @@
 			"Name": "SkyLight",
 			"Brightness": 0.699999988079071,
 			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
+			"ID": "9502bd01464f12fc1b5e41a6e06d476b",
+			"TypeName": "FlaxEngine.ExponentialHeightFog",
+			"ParentID": "28553d634087c67c711ebd96080482aa",
+			"Name": "ExponentialHeightFog",
+			"FogDensity": 3.0,
+			"FogHeightFalloff": 0.00009999999747378752,
+			"FogInscatteringColor": {
+				"R": 1.0,
+				"G": 0.7444444298744202,
+				"B": 0.7444444298744202,
+				"A": 1.0
+			},
+			"VolumetricFogEnable": true
 		},
 		{
 			"ID": "b82fdced42090079fed2f9ac98b166d3",
@@ -1881,6 +1898,8 @@
 				}
 			},
 			"Brightness": 2.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 558.5,
 			"OuterAngle": 82.79999542236328
 		},
@@ -2230,6 +2249,8 @@
 				}
 			},
 			"Brightness": 5.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 558.5,
 			"OuterAngle": 82.79999542236328
 		},
@@ -3337,6 +3358,8 @@
 				"A": 1.0
 			},
 			"Brightness": 8.399993896484375,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 500.0,
 			"OuterAngle": 80.0,
 			"InnerAngle": 51.400001525878906,
@@ -3424,8 +3447,10 @@
 				"A": 1.0
 			},
 			"Brightness": 8.399993896484375,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 500.0,
-			"OuterAngle": 88.0,
+			"OuterAngle": 78.9000015258789,
 			"InnerAngle": 51.400001525878906,
 			"SourceRadius": 10.579999923706055
 		},
@@ -3510,6 +3535,8 @@
 				"A": 1.0
 			},
 			"Brightness": 8.399993896484375,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 500.0,
 			"OuterAngle": 80.0,
 			"InnerAngle": 51.400001525878906,
@@ -3597,6 +3624,8 @@
 				"A": 1.0
 			},
 			"Brightness": 8.399993896484375,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 500.0,
 			"OuterAngle": 80.0,
 			"InnerAngle": 51.400001525878906,
@@ -6213,6 +6242,8 @@
 				"A": 1.0
 			},
 			"Brightness": 5.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6293,6 +6324,8 @@
 				"A": 1.0
 			},
 			"Brightness": 1.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6373,6 +6406,8 @@
 				"A": 1.0
 			},
 			"Brightness": 0.5,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6453,6 +6488,8 @@
 				"A": 1.0
 			},
 			"Brightness": 2.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6533,6 +6570,8 @@
 				"A": 1.0
 			},
 			"Brightness": 3.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6613,6 +6652,8 @@
 				"A": 1.0
 			},
 			"Brightness": 1.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -6693,6 +6734,8 @@
 				"A": 1.0
 			},
 			"Brightness": 2.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"OuterAngle": 78.69999694824219
 		},
 		{
@@ -7533,6 +7576,7 @@
 				"A": 1.0
 			},
 			"Brightness": 6.0,
+			"CastVolumetricShadow": true,
 			"ShadowsDistance": 800.0,
 			"ShadowsFadeDistance": 1000.0,
 			"ShadowsDepthBias": 0.30000001192092896,
@@ -7801,6 +7845,8 @@
 				}
 			},
 			"Brightness": 3.0,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 543.2999877929688,
 			"OuterAngle": 80.0
 		},
@@ -8326,6 +8372,8 @@
 				"A": 1.0
 			},
 			"Brightness": 12.799995422363281,
+			"VolumetricScatteringIntensity": 3.0,
+			"CastVolumetricShadow": true,
 			"Radius": 376.8000183105469,
 			"OuterAngle": 70.20000457763672,
 			"InnerAngle": 31.100000381469727,
@@ -9056,6 +9104,7 @@
 				"B": 0.4900186061859131,
 				"A": 1.0
 			},
+			"CastVolumetricShadow": true,
 			"ShadowsDistance": 0.0,
 			"ShadowsFadeDistance": 500.0,
 			"ShadowsDepthBias": 10.0,
@@ -9082,6 +9131,7 @@
 			},
 			"StaticFlags": 0,
 			"Brightness": 3.0,
+			"VolumetricScatteringIntensity": 0.0,
 			"ShadowsDistance": 0.0,
 			"ShadowsFadeDistance": 500.0,
 			"ShadowsDepthBias": 10.0,
