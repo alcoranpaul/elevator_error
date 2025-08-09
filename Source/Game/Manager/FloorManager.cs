@@ -30,6 +30,8 @@ public class FloorManager : InstanceManagerScript
 
     [ShowInEditor, Serialize] private BezierCurve<float> _anomalyCurve;
 
+    [ShowInEditor, Serialize] private Actor _anomaliesActor;
+
     /// <summary>
     /// Array holding data for each floor.
     /// </summary>
@@ -48,6 +50,8 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private const int FLOOR_COUNT = 5;
 
+    private Actor[] _anomalies;
+
 
 
     /// <inheritdoc/>
@@ -58,6 +62,10 @@ public class FloorManager : InstanceManagerScript
         InitializeFloors();
         GoToGroundFloor();
         _skyLight.Brightness = 3f;
+
+        if (_anomaliesActor != null && _anomaliesActor.Children != null && _anomaliesActor.Children.Length > 0)
+            _anomalies = _anomaliesActor.Children;
+
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
         _buttonPanel.OnElevatorStoppedVibrating += OnElevatorStoppedVibrating;
     }
@@ -139,6 +147,12 @@ public class FloorManager : InstanceManagerScript
             OnFloorChangeRequested?.Invoke(FindFloorNumber(_currentFloor) + 1);
         }
 
+        // Deactivate anomalies
+        foreach (Actor item in _anomalies)
+        {
+            item.IsActive = false;
+        }
+
         return true;
     }
 
@@ -165,7 +179,17 @@ public class FloorManager : InstanceManagerScript
         _anomalyCurve.Evaluate(out float chanceValue, nextIndex);
         float anomalyChance = chanceValue;
         _currentFloor.HasAnomaly = Random.Shared.NextSingle() < anomalyChance;
+
         Debug.Log($"Floor {nextIndex} has anomaly: {_currentFloor.HasAnomaly}");
+
+        // Activate anomaly at random
+        if (_currentFloor.HasAnomaly)
+        {
+            int randIndex = Random.Shared.Next(0, _anomalies.Length);
+            Actor anomaly = _anomalies[randIndex];
+            anomaly.IsActive = true;
+            Debug.Log($"Activated anomaly on floor {nextIndex} at index {randIndex}");
+        }
     }
 
 
