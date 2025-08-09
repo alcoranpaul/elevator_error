@@ -76,7 +76,7 @@
 		"Keyframes": [
 			{
 				"Time": 0.0,
-				"Value": 0.4,
+				"Value": 1.0,
 				"TangentIn": 0.0,
 				"TangentOut": 0.0
 			},
@@ -945,7 +945,7 @@
 			"Name": "Label",
 			"Transform": {
 				"Translation": {
-					"X": -1.61419677734375,
+					"X": 52.81549072265625,
 					"Y": 120.34243774414063,
 					"Z": 0.0
 				}
@@ -10356,6 +10356,14 @@
 			}
 		},
 		{
+			"ID": "2d3633c543d8667c063f1b8288f1d98c",
+			"TypeName": "Game.TVAnomaly",
+			"ParentID": "0d8ed4c2425179bc728076ab9a5473b6",
+			"V": {
+	"_videoPlayer": "543248fe492a51f009adc2b04dff5d2d"
+}
+		},
+		{
 			"ID": "1eeca3c449beacc5dc606bbffc184ce3",
 			"TypeName": "FlaxEngine.AnimatedModel",
 			"ParentID": "0d8ed4c2425179bc728076ab9a5473b6",
@@ -10610,7 +10618,7 @@
 			"IsLooping": true,
 			"IsAudioSpatial": true,
 			"AudioMinDistance": 30.0,
-			"AudioAttenuation": 40.0
+			"AudioAttenuation": 50.0
 		},
 		{
 			"ID": "9dd7c4534067c70c9bed7cbb496d3da7",
@@ -10626,15 +10634,16 @@
 			},
 			"Color": {
 				"R": 1.0,
-				"G": 0.9686099886894226,
-				"B": 0.6331650018692017,
+				"G": 0.472690224647522,
+				"B": 0.41955745220184326,
 				"A": 1.0
 			},
-			"Brightness": 50.0,
-			"VolumetricScatteringIntensity": 10.0,
+			"Brightness": 20.0,
+			"VolumetricScatteringIntensity": 20.0,
 			"CastVolumetricShadow": true,
 			"Radius": 280.199951171875,
-			"OuterAngle": 31.19999885559082
+			"OuterAngle": 70.0,
+			"InnerAngle": 50.0
 		},
 		{
 			"ID": "85dc388d435cc3f743e8e5b978bbfa0e",

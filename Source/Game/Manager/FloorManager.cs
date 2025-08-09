@@ -50,7 +50,7 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private const int FLOOR_COUNT = 5;
 
-    private Actor[] _anomalies;
+    private IAnomaly[] _anomalies;
 
 
 
@@ -64,7 +64,15 @@ public class FloorManager : InstanceManagerScript
         _skyLight.Brightness = 3f;
 
         if (_anomaliesActor != null && _anomaliesActor.Children != null && _anomaliesActor.Children.Length > 0)
-            _anomalies = _anomaliesActor.Children;
+        {
+            Actor[] children = _anomaliesActor.Children;
+            _anomalies = new IAnomaly[children.Length];
+            for (int i = 0; i < children.Length; i++)
+            {
+                if (!children[i].TryGetScript(out _anomalies[i]))
+                    Debug.LogError($"Failed to get anomaly script from {children[i].Name}");
+            }
+        }
 
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
         _buttonPanel.OnElevatorStoppedVibrating += OnElevatorStoppedVibrating;
@@ -76,6 +84,16 @@ public class FloorManager : InstanceManagerScript
             _skyLight.Brightness = 3f;
         else
             _skyLight.Brightness = 0.7f;
+
+
+
+        // Activate anomaly at random
+        if (_currentFloor != null && _currentFloor.HasAnomaly)
+        {
+            int randIndex = Random.Shared.Next(0, _anomalies.Length);
+            IAnomaly anomaly = _anomalies[randIndex];
+            anomaly.Activate();
+        }
     }
 
     public override void OnStart()
@@ -148,9 +166,9 @@ public class FloorManager : InstanceManagerScript
         }
 
         // Deactivate anomalies
-        foreach (Actor item in _anomalies)
+        foreach (IAnomaly item in _anomalies)
         {
-            item.IsActive = false;
+            item.Deactivate();
         }
 
         return true;
@@ -182,14 +200,6 @@ public class FloorManager : InstanceManagerScript
 
         Debug.Log($"Floor {nextIndex} has anomaly: {_currentFloor.HasAnomaly}");
 
-        // Activate anomaly at random
-        if (_currentFloor.HasAnomaly)
-        {
-            int randIndex = Random.Shared.Next(0, _anomalies.Length);
-            Actor anomaly = _anomalies[randIndex];
-            anomaly.IsActive = true;
-            Debug.Log($"Activated anomaly on floor {nextIndex} at index {randIndex}");
-        }
     }
 
 
