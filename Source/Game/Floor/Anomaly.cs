@@ -9,7 +9,7 @@ namespace Game;
 /// <summary>
 /// Anomaly Script.
 /// </summary>
-public abstract class Anomaly : Script, IAnomaly
+public class Anomaly : Script, IAnomaly
 {
 
     /// <inheritdoc/>
@@ -23,12 +23,12 @@ public abstract class Anomaly : Script, IAnomaly
     public virtual void Activate()
     {
         Actor.IsActive = true;
-        Debug.Log($"Anomaly Activated!: {Actor.IsActive}");
+
     }
 
     public virtual void Deactivate()
     {
         Actor.IsActive = false;
-        Debug.Log($"Anomaly Deactivated!: {Actor.IsActive}");
+
     }
 }

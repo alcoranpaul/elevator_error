@@ -76,7 +76,7 @@
 		"Keyframes": [
 			{
 				"Time": 0.0,
-				"Value": 1.0,
+				"Value": 0.4,
 				"TangentIn": 0.0,
 				"TangentOut": 0.0
 			},
@@ -9356,6 +9356,7 @@
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"Name": "FPSPawn",
 			"StaticFlags": 0,
+			"Layer": 1,
 			"Center": {
 				"X": 0.0,
 				"Y": 87.0,
@@ -9544,9 +9545,9 @@
 			"Name": "Capsule 2",
 			"Transform": {
 				"Translation": {
-					"X": 33.46795654296875,
-					"Y": -0.00000762939453125,
-					"Z": 29.95098876953125
+					"X": 1.30767822265625,
+					"Y": 54.87364196777344,
+					"Z": 80.75262451171875
 				}
 			},
 			"StaticFlags": 0,
@@ -10342,106 +10343,16 @@
 			"StaticFlags": 0
 		},
 		{
-			"ID": "c9134d2f4171912c093758b2d351d80a",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
-			"IsActive": false,
-			"Name": "Jumpscare",
-			"Transform": {
-				"Translation": {
-					"X": 399.58953857421875,
-					"Y": 30.06245231628418,
-					"Z": 376.6646728515625
-				}
-			},
-			"StaticFlags": 0
-		},
-		{
-			"ID": "8e1ae6e04ccc1dc15378b5a9136cf6b9",
-			"TypeName": "Game.JumpscareAnomaly",
-			"ParentID": "c9134d2f4171912c093758b2d351d80a",
-			"V": {
-	"_collider": "4465e50f4fecef504faf7f819843ef67",
-	"_jumpscareActor": "9e1610f24d368bc4e1fde88ee2751578"
-}
-		},
-		{
-			"ID": "9e1610f24d368bc4e1fde88ee2751578",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "c9134d2f4171912c093758b2d351d80a",
-			"IsActive": false,
-			"Name": "Skeleton 3",
-			"Transform": {
-				"Translation": {
-					"X": -89.80291748046875,
-					"Y": 49.03062438964844,
-					"Z": 149.366943359375
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			},
-			"StaticFlags": 0,
-			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
-			"AnimationGraph": "c990160d4648823fcb7f1b95293fee8b",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "4465e50f4fecef504faf7f819843ef67",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "c9134d2f4171912c093758b2d351d80a",
-			"Name": "BoxCollider",
-			"Transform": {
-				"Translation": {
-					"X": -122.07022094726563,
-					"Y": 46.532447814941406,
-					"Z": 22.735595703125
-				}
-			},
-			"StaticFlags": 0,
-			"IsTrigger": true,
-			"Size": {
-				"X": 150.0,
-				"Y": 100.0,
-				"Z": 100.0
-			}
-		},
-		{
-			"ID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "EmptyActor",
-			"Transform": {
-				"Translation": {
-					"X": 17.558446884155273,
-					"Y": -45.6215705871582,
-					"Z": 1015.2496337890625
-				}
-			}
-		},
-		{
 			"ID": "7d7f95bf4604fa41d4d0d4813b242164",
 			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "Skeleton 0",
 			"Transform": {
 				"Translation": {
-					"X": -0.5299434661865234,
-					"Y": -571.4908447265625,
-					"Z": 783.665771484375
+					"X": 19.01441764831543,
+					"Y": -588.4066162109375,
+					"Z": 906.4903564453125
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -10467,6 +10378,12 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "61c84b3844909a34f5e135acae947777",
+			"TypeName": "Game.Anomaly",
+			"ParentID": "7d7f95bf4604fa41d4d0d4813b242164",
+			"V": {}
 		},
 		{
 			"ID": "faa81e7a4a2faf38098fb58f8fff61e5",
@@ -10498,49 +10415,16 @@
 			"OuterAngle": 50.0
 		},
 		{
-			"ID": "cefb81354d0b971580e54c89bfaff0d9",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "Skeleton 2",
-			"Transform": {
-				"Translation": {
-					"X": -881.5166015625,
-					"Y": 46.97822952270508,
-					"Z": -550.650390625
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			},
-			"StaticFlags": 0,
-			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
-			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
 			"ID": "1429f18347d9e3f1590becaecfb090d3",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "SM_Prop_Skeleton_Slave_Shackles_02",
 			"Transform": {
 				"Translation": {
-					"X": -300.604736328125,
-					"Y": 78.88111877441406,
-					"Z": -754.1166381835938
+					"X": -281.0603942871094,
+					"Y": 61.96533966064453,
+					"Z": -631.2920532226563
 				}
 			},
 			"StaticFlags": 0,
@@ -10557,18 +10441,30 @@
 			}
 		},
 		{
+			"ID": "443044c947cc1a57930784a3f9fccb70",
+			"TypeName": "Game.Anomaly",
+			"ParentID": "1429f18347d9e3f1590becaecfb090d3",
+			"V": {}
+		},
+		{
 			"ID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
 			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "Office_Lying",
 			"Transform": {
 				"Translation": {
-					"X": 509.8176574707031,
-					"Y": 51.8177490234375,
-					"Z": -398.83465576171875
+					"X": 529.3619995117188,
+					"Y": 34.90196990966797,
+					"Z": -276.01007080078125
 				}
 			}
+		},
+		{
+			"ID": "896141ed4cbd0541e2f581b43392fb07",
+			"TypeName": "Game.Anomaly",
+			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"V": {}
 		},
 		{
 			"ID": "e38a9a7945faae0dc6974287a9e6d16e",
@@ -10697,14 +10593,14 @@
 		{
 			"ID": "9ea93a9749894cab8736508ca8ad9ccd",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "SM_Prop_Skeleton_Slave_Wall_Sitting_01",
 			"Transform": {
 				"Translation": {
-					"X": 457.2236022949219,
-					"Y": 49.34126281738281,
-					"Z": 38.15185546875
+					"X": 476.7679443359375,
+					"Y": 32.42548370361328,
+					"Z": 160.9764404296875
 				}
 			},
 			"StaticFlags": 0,
@@ -10721,74 +10617,22 @@
 			}
 		},
 		{
-			"ID": "d290626744820d4fe5405088e78dc578",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_Cage_2",
-			"Transform": {
-				"Translation": {
-					"X": 290.8218078613281,
-					"Y": 66.76095581054688,
-					"Z": -309.57379150390625
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "7a69325c4b73b4f0460af2bd8932a61c",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "e13491fa4df53c020cc7f4b53f72614c",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_2",
-			"Transform": {
-				"Translation": {
-					"X": -501.5883483886719,
-					"Y": 132.39137268066406,
-					"Z": 198.41357421875
-				},
-				"Orientation": {
-					"X": 0.7071068286895752,
-					"Y": 0.0,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "0d7138624aed508e58cd25b82cb6f668",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
+			"ID": "f8ac7e9443f70001013749a1048ee57f",
+			"TypeName": "Game.Anomaly",
+			"ParentID": "9ea93a9749894cab8736508ca8ad9ccd",
+			"V": {}
 		},
 		{
 			"ID": "73e83f8d4512e17a01ca4dbb1e575ee9",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "SM_Prop_Skeleton_Slave_Lying_3",
 			"Transform": {
 				"Translation": {
-					"X": 68.44210052490234,
-					"Y": 51.363677978515625,
-					"Z": 255.8709716796875
+					"X": 87.98646545410156,
+					"Y": 34.447898864746094,
+					"Z": 378.695556640625
 				},
 				"Orientation": {
 					"X": 0.0,
@@ -10811,16 +10655,99 @@
 			}
 		},
 		{
+			"ID": "4a5fe79f43a3fd0e0c44d883d5751f55",
+			"TypeName": "Game.Anomaly",
+			"ParentID": "73e83f8d4512e17a01ca4dbb1e575ee9",
+			"V": {}
+		},
+		{
+			"ID": "c9134d2f4171912c093758b2d351d80a",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Kitchen_Jumpscare",
+			"Transform": {
+				"Translation": {
+					"X": 399.58953857421875,
+					"Y": 30.06245231628418,
+					"Z": 376.6646728515625
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "8e1ae6e04ccc1dc15378b5a9136cf6b9",
+			"TypeName": "Game.JumpscareAnomaly",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"V": {
+	"_collider": "4465e50f4fecef504faf7f819843ef67",
+	"_jumpscareActor": "9e1610f24d368bc4e1fde88ee2751578"
+}
+		},
+		{
+			"ID": "9e1610f24d368bc4e1fde88ee2751578",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"IsActive": false,
+			"Name": "Skeleton 3",
+			"Transform": {
+				"Translation": {
+					"X": -89.80291748046875,
+					"Y": 49.03062438964844,
+					"Z": 149.366943359375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "c990160d4648823fcb7f1b95293fee8b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "4465e50f4fecef504faf7f819843ef67",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Translation": {
+					"X": -122.07022094726563,
+					"Y": 46.532447814941406,
+					"Z": 22.735595703125
+				}
+			},
+			"StaticFlags": 0,
+			"IsTrigger": true,
+			"Size": {
+				"X": 150.0,
+				"Y": 100.0,
+				"Z": 100.0
+			}
+		},
+		{
 			"ID": "0d8ed4c2425179bc728076ab9a5473b6",
 			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
 			"IsActive": false,
 			"Name": "TV_Anomaly",
 			"Transform": {
 				"Translation": {
-					"X": -22.110708236694336,
-					"Y": 46.97822952270508,
-					"Z": 483.2330322265625
+					"X": -2.5663468837738037,
+					"Y": 30.06245231628418,
+					"Z": 606.0576171875
 				}
 			}
 		},
@@ -11113,6 +11040,193 @@
 			"Radius": 280.199951171875,
 			"OuterAngle": 70.0,
 			"InnerAngle": 50.0
+		},
+		{
+			"ID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "FemaleToilet_Jumpscare",
+			"Transform": {
+				"Translation": {
+					"X": -861.9722290039063,
+					"Y": 30.06245231628418,
+					"Z": -427.8258056640625
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "7de6968943f4953f0b37628d93a49911",
+			"TypeName": "Game.JumpscareAnomaly",
+			"ParentID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"V": {
+	"_collider": "80aae18d4beb0bde7c94c3a59c5e8fc3",
+	"_jumpscareActor": "1d20c9a64687e628e58c9380cec5f34c",
+	"_actorsToDeactivate": [
+		"cefb81354d0b971580e54c89bfaff0d9"
+	]
+}
+		},
+		{
+			"ID": "cefb81354d0b971580e54c89bfaff0d9",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"Name": "Skeleton 2",
+			"Transform": {
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "80aae18d4beb0bde7c94c3a59c5e8fc3",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Translation": {
+					"X": 111.94549560546875,
+					"Y": 51.545013427734375,
+					"Z": 54.78387451171875
+				}
+			},
+			"StaticFlags": 0,
+			"IsTrigger": true
+		},
+		{
+			"ID": "1d20c9a64687e628e58c9380cec5f34c",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"IsActive": false,
+			"Name": "Skeleton 3",
+			"Transform": {
+				"Translation": {
+					"X": 67.7901611328125,
+					"Y": 0.0,
+					"Z": 60.91680908203125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.6755902171134949,
+					"Z": 0.0,
+					"W": 0.7372773885726929
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "c990160d4648823fcb7f1b95293fee8b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "dc229fdd4f70182587d976892ac134c8",
+			"TypeName": "FlaxEngine.SpotLight",
+			"ParentID": "dc9a5bc84537bf6e0a7d16aa8c09a72b",
+			"Name": "SpotLight",
+			"Transform": {
+				"Translation": {
+					"X": 384.78436279296875,
+					"Y": 232.5748291015625,
+					"Z": 52.24920654296875
+				},
+				"Orientation": {
+					"X": 0.29987773299217224,
+					"Y": -0.6171823740005493,
+					"Z": 0.2747873067855835,
+					"W": 0.6735364198684692
+				}
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.7644158601760864,
+				"B": 0.3888888955116272,
+				"A": 1.0
+			},
+			"VolumetricScatteringIntensity": 10.0,
+			"CastVolumetricShadow": true
+		},
+		{
+			"ID": "b067ce434a9befe2457b2fac90c24d9a",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Conference_Jumpscare",
+			"Transform": {
+				"Translation": {
+					"X": -482.04400634765625,
+					"Y": 75.4056167602539,
+					"Z": 321.2381591796875
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "f744916a4db7f15f54c5d19dac57cb0e",
+			"TypeName": "Game.JumpscareAnomaly",
+			"ParentID": "b067ce434a9befe2457b2fac90c24d9a",
+			"V": {
+	"_collider": "79b5cabf46526b11513a41beaf39c9b5",
+	"_jumpscareActor": "5c655efb445b6332eed547aa44c71e0d"
+}
+		},
+		{
+			"ID": "5c655efb445b6332eed547aa44c71e0d",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "b067ce434a9befe2457b2fac90c24d9a",
+			"IsActive": false,
+			"Name": "Skeleton 3",
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "c990160d4648823fcb7f1b95293fee8b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "79b5cabf46526b11513a41beaf39c9b5",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "b067ce434a9befe2457b2fac90c24d9a",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 49.876976013183594,
+					"Z": 29.5545654296875
+				}
+			},
+			"StaticFlags": 0
 		}
 	]
 }
