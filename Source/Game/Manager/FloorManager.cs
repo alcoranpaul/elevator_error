@@ -28,6 +28,8 @@ public class FloorManager : InstanceManagerScript
 
     [ShowInEditor, Serialize] private CameraShakeEvent _cannotProceedCameraShakeEvent;
 
+    [ShowInEditor, Serialize] private BezierCurve<float> _anomalyCurve;
+
     /// <summary>
     /// Array holding data for each floor.
     /// </summary>
@@ -158,7 +160,12 @@ public class FloorManager : InstanceManagerScript
 
         _currentFloor = _floors[nextIndex];
         _currentFloor.IsCleaned = false;
-        _currentFloor.HasAnomaly = false;
+
+        // Calculate anomaly chance
+        _anomalyCurve.Evaluate(out float chanceValue, nextIndex);
+        float anomalyChance = chanceValue;
+        _currentFloor.HasAnomaly = Random.Shared.NextSingle() < anomalyChance;
+        Debug.Log($"Floor {nextIndex} has anomaly: {_currentFloor.HasAnomaly}");
     }
 
 

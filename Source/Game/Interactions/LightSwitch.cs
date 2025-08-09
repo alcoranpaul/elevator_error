@@ -12,29 +12,45 @@ namespace Game;
 public class LightSwitch : AInteraction
 {
     [ShowInEditor, Serialize] private Actor _LightActor;
-    private bool _IsOn = true;
+    [ShowInEditor, NonSerialized] private bool _IsOn = true;
 
 
 
     public override void OnAwake()
     {
         base.OnAwake();
-        ToggleLight();
         _isToggleable = true;
+        ToggleLight(false);
+    }
+
+    public override void OnStart()
+    {
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating += OnFloorChangeRequested;
+    }
+
+    public override void OnDisable()
+    {
+        SingletonManager.Get<ButtonPanel>().OnElevatorStoppedVibrating -= OnFloorChangeRequested;
+        base.OnDisable();
+    }
+
+    private void OnFloorChangeRequested()
+    {
+        ToggleLight(false);
     }
 
     /// <inheritdoc/>
     protected override void OnInteract(Actor interactor)
     {
-        ToggleLight();
+        ToggleLight(!_IsOn);
 
     }
 
 
-    private void ToggleLight()
+    private void ToggleLight(bool flag)
     {
-        _IsOn = !_IsOn;
-        _LightActor.IsActive = _IsOn;
+        _IsOn = flag;
+        _LightActor.IsActive = flag;
 
     }
 

@@ -50,7 +50,7 @@
 			"TypeName": "DigiTalino_Plugin.AudioManager",
 			"ParentID": "74a68a984824b4510d12589f199ad68f",
 			"V": {
-	"_bgm": "483218a64d5a9b5d384cacbe5bd50758"
+	"_bgm": "c338b9604be5eb0af74a539994fe3482"
 }
 		},
 		{
@@ -71,6 +71,40 @@
 			"Y": 0.0,
 			"Z": 0.0
 		}
+	},
+	"_anomalyCurve": {
+		"Keyframes": [
+			{
+				"Time": 0.0,
+				"Value": 0.4,
+				"TangentIn": 0.0,
+				"TangentOut": 0.0
+			},
+			{
+				"Time": 1.0,
+				"Value": 0.4,
+				"TangentIn": 0.0,
+				"TangentOut": 0.0
+			},
+			{
+				"Time": 2.0,
+				"Value": 0.5,
+				"TangentIn": 0.0,
+				"TangentOut": 0.0
+			},
+			{
+				"Time": 3.0,
+				"Value": 0.6,
+				"TangentIn": 0.0,
+				"TangentOut": 0.0
+			},
+			{
+				"Time": 4.0,
+				"Value": 0.7,
+				"TangentIn": 0.0,
+				"TangentOut": 0.0
+			}
+		]
 	}
 }
 		},
@@ -1934,6 +1968,35 @@
 			}
 		},
 		{
+			"ID": "38fbb04f4c06c80e414ef48dc4f42a63",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "0474993b43627651ff446da8f1c729e0",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": -0.0001220703125,
+				"Y": 0.0,
+				"Z": 0.00006103515625
+			},
+			"Size": {
+				"X": 12.17266845703125,
+				"Y": 20.278480529785156,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "59ed1d8245bf13d961de739741ef4d92",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "38fbb04f4c06c80e414ef48dc4f42a63",
+			"V": {
+	"_LightActor": "278d68544e41659dc745d4bca5d143f1",
+	"_name": "Male Washroom Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
+	"_collider": "38fbb04f4c06c80e414ef48dc4f42a63"
+}
+		},
+		{
 			"ID": "669683d1442a4e0f0c6580ac72a62541",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "b82fdced42090079fed2f9ac98b166d3",
@@ -2283,6 +2346,35 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "14f2528e49d204649811f5bb83a93be4",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "2f456dd54f54945f2fc27cb1438f85ff",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": -0.0001220703125,
+				"Y": 0.0,
+				"Z": 0.00006103515625
+			},
+			"Size": {
+				"X": 12.17266845703125,
+				"Y": 20.278480529785156,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "414e3a54474794ba26d5a1afde3d7259",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "14f2528e49d204649811f5bb83a93be4",
+			"V": {
+	"_LightActor": "7faa3e7f4fcd75be67cd809a7b9630f5",
+	"_name": "Female Washroom Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
+	"_collider": "14f2528e49d204649811f5bb83a93be4"
+}
 		},
 		{
 			"ID": "bd8fa70947c861b251ef71b79f638edb",
@@ -3731,6 +3823,35 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "cd5e31744a2237f5cd989db768dec040",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "f53502e546dbd49b026b5eb84f402868",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": -0.000091552734375,
+				"Y": 0.0,
+				"Z": 0.00006103515625
+			},
+			"Size": {
+				"X": 12.17266845703125,
+				"Y": 20.278472900390625,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "ed31dd644cae7eedeed64c8f13233f15",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "cd5e31744a2237f5cd989db768dec040",
+			"V": {
+	"_LightActor": "aab85bed48fa37e36e2a6081e02bf335",
+	"_name": "Office Light Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
+	"_collider": "cd5e31744a2237f5cd989db768dec040"
+}
 		},
 		{
 			"ID": "f86cc28a4a5191537f88c99d43e6d265",
@@ -8408,6 +8529,35 @@
 					}
 				]
 			}
+		},
+		{
+			"ID": "9a75947e45c2ac4fba391a9d9097c8cf",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "a31764bb43a1831e06962d82bc7c2076",
+			"Name": "BoxCollider",
+			"StaticFlags": 0,
+			"Layer": 2,
+			"Center": {
+				"X": -0.000091552734375,
+				"Y": 0.0,
+				"Z": 0.00006103515625
+			},
+			"Size": {
+				"X": 12.17266845703125,
+				"Y": 20.278472900390625,
+				"Z": 5.6978759765625
+			}
+		},
+		{
+			"ID": "2ab551e5420f8ee047bf598bbc534366",
+			"TypeName": "Game.LightSwitch",
+			"ParentID": "9a75947e45c2ac4fba391a9d9097c8cf",
+			"V": {
+	"_LightActor": "08f70b9843f074854020fe8aece343bc",
+	"_name": "Maintenance Switch",
+	"_interactionSound": "2cc1809748f115ef783b4d9cf292838f",
+	"_collider": "9a75947e45c2ac4fba391a9d9097c8cf"
+}
 		},
 		{
 			"ID": "749bcdd14ab3d097f9d03fbcedb8f37a",
