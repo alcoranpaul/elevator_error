@@ -945,7 +945,7 @@
 			"Name": "Label",
 			"Transform": {
 				"Translation": {
-					"X": 52.81549072265625,
+					"X": -1.61419677734375,
 					"Y": 120.34243774414063,
 					"Z": 0.0
 				}
@@ -10342,16 +10342,485 @@
 			"StaticFlags": 0
 		},
 		{
-			"ID": "0d8ed4c2425179bc728076ab9a5473b6",
+			"ID": "c9134d2f4171912c093758b2d351d80a",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "9f7703cd4b316e26a7513c8f7455ab7a",
+			"IsActive": false,
+			"Name": "Jumpscare",
+			"Transform": {
+				"Translation": {
+					"X": 399.58953857421875,
+					"Y": 30.06245231628418,
+					"Z": 376.6646728515625
+				}
+			},
+			"StaticFlags": 0
+		},
+		{
+			"ID": "8e1ae6e04ccc1dc15378b5a9136cf6b9",
+			"TypeName": "Game.JumpscareAnomaly",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"V": {
+	"_collider": "4465e50f4fecef504faf7f819843ef67",
+	"_jumpscareActor": "9e1610f24d368bc4e1fde88ee2751578"
+}
+		},
+		{
+			"ID": "9e1610f24d368bc4e1fde88ee2751578",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"IsActive": false,
+			"Name": "Skeleton 3",
+			"Transform": {
+				"Translation": {
+					"X": -89.80291748046875,
+					"Y": 49.03062438964844,
+					"Z": 149.366943359375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "c990160d4648823fcb7f1b95293fee8b",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "4465e50f4fecef504faf7f819843ef67",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "c9134d2f4171912c093758b2d351d80a",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Translation": {
+					"X": -122.07022094726563,
+					"Y": 46.532447814941406,
+					"Z": 22.735595703125
+				}
+			},
+			"StaticFlags": 0,
+			"IsTrigger": true,
+			"Size": {
+				"X": 150.0,
+				"Y": 100.0,
+				"Z": 100.0
+			}
+		},
+		{
+			"ID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "74a68a984824b4510d12589f199ad68f",
+			"Name": "EmptyActor",
+			"Transform": {
+				"Translation": {
+					"X": 17.558446884155273,
+					"Y": -45.6215705871582,
+					"Z": 1015.2496337890625
+				}
+			}
+		},
+		{
+			"ID": "7d7f95bf4604fa41d4d0d4813b242164",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "Skeleton 0",
+			"Transform": {
+				"Translation": {
+					"X": -0.5299434661865234,
+					"Y": -571.4908447265625,
+					"Z": 783.665771484375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				},
+				"Scale": {
+					"X": 5.0,
+					"Y": 5.0,
+					"Z": 5.0
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "faa81e7a4a2faf38098fb58f8fff61e5",
+			"TypeName": "FlaxEngine.SpotLight",
+			"ParentID": "7d7f95bf4604fa41d4d0d4813b242164",
+			"Name": "SpotLight",
+			"Transform": {
+				"Translation": {
+					"X": -0.0000018399250620859675,
+					"Y": 170.1586456298828,
+					"Z": 21.046289443969727
+				},
+				"Orientation": {
+					"X": 0.9832550287246704,
+					"Y": -5.379201297728287e-7,
+					"Z": -5.379201297728287e-7,
+					"W": 0.1822354793548584
+				}
+			},
+			"StaticFlags": 0,
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 0.009743690490722656,
+				"A": 1.0
+			},
+			"Brightness": 101.9000015258789,
+			"Radius": 1500.0,
+			"OuterAngle": 50.0
+		},
+		{
+			"ID": "cefb81354d0b971580e54c89bfaff0d9",
+			"TypeName": "FlaxEngine.AnimatedModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "Skeleton 2",
+			"Transform": {
+				"Translation": {
+					"X": -881.5166015625,
+					"Y": 46.97822952270508,
+					"Z": -550.650390625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
+			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "1429f18347d9e3f1590becaecfb090d3",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Shackles_02",
+			"Transform": {
+				"Translation": {
+					"X": -300.604736328125,
+					"Y": 78.88111877441406,
+					"Z": -754.1166381835938
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "59d9a67a4278879d5a4e5c9b0b8dedfb",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "Office_Lying",
+			"Transform": {
+				"Translation": {
+					"X": 509.8176574707031,
+					"Y": 51.8177490234375,
+					"Z": -398.83465576171875
+				}
+			}
+		},
+		{
+			"ID": "e38a9a7945faae0dc6974287a9e6d16e",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"Name": "SM_Prop_Skeleton_Table_02",
+			"Transform": {
+				"Translation": {
+					"X": 7.399169921875,
+					"Y": -3.948314666748047,
+					"Z": -380.96368408203125
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "9e246a3641511107c6599c9c3844b6c3",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "2590f24549839511fba016baa073fdb6",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"Name": "SM_Prop_Skeleton_Table_3",
+			"Transform": {
+				"Translation": {
+					"X": 7.399169921875,
+					"Y": -3.948314666748047,
+					"Z": -70.61968994140625
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7071068286895752,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "9e246a3641511107c6599c9c3844b6c3",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ade5c3884725bce87738648db02f3763",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"Name": "SM_Prop_Skeleton_Table_01",
+			"Transform": {
+				"Translation": {
+					"X": -17.14306640625,
+					"Y": 3.9483108520507813,
+					"Z": 105.94287109375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7193397879600525,
+					"Z": 0.0,
+					"W": 0.6946583986282349
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "48de68bd400bff8ca4b548a4fbab7118",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "ac7e19154e39b6dee1a588a5306a9199",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
+			"Name": "SM_Prop_Skeleton_Table_2",
+			"Transform": {
+				"Translation": {
+					"X": 2.3446044921875,
+					"Y": 3.9483108520507813,
+					"Z": 345.640380859375
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.7193397879600525,
+					"Z": 0.0,
+					"W": 0.6946583986282349
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "48de68bd400bff8ca4b548a4fbab7118",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "9ea93a9749894cab8736508ca8ad9ccd",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Wall_Sitting_01",
+			"Transform": {
+				"Translation": {
+					"X": 457.2236022949219,
+					"Y": 49.34126281738281,
+					"Z": 38.15185546875
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "d5ca2ffd427dd6f3dc79208c321c0854",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "d290626744820d4fe5405088e78dc578",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Cage_2",
+			"Transform": {
+				"Translation": {
+					"X": 290.8218078613281,
+					"Y": 66.76095581054688,
+					"Z": -309.57379150390625
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "7a69325c4b73b4f0460af2bd8932a61c",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "e13491fa4df53c020cc7f4b53f72614c",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_2",
+			"Transform": {
+				"Translation": {
+					"X": -501.5883483886719,
+					"Y": 132.39137268066406,
+					"Z": 198.41357421875
+				},
+				"Orientation": {
+					"X": 0.7071068286895752,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.7071068286895752
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "0d7138624aed508e58cd25b82cb6f668",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "73e83f8d4512e17a01ca4dbb1e575ee9",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
+			"IsActive": false,
+			"Name": "SM_Prop_Skeleton_Slave_Lying_3",
+			"Transform": {
+				"Translation": {
+					"X": 68.44210052490234,
+					"Y": 51.363677978515625,
+					"Z": 255.8709716796875
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 1.0,
+					"Z": 0.0,
+					"W": -4.371138828673793e-8
+				}
+			},
+			"StaticFlags": 0,
+			"Model": "fab113204f7c5a1fa768e1869ffd0bc2",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "0d8ed4c2425179bc728076ab9a5473b6",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
 			"IsActive": false,
 			"Name": "TV_Anomaly",
 			"Transform": {
 				"Translation": {
-					"X": -2.5663468837738037,
-					"Y": 30.06245231628418,
-					"Z": 606.0576171875
+					"X": -22.110708236694336,
+					"Y": 46.97822952270508,
+					"Z": 483.2330322265625
 				}
 			}
 		},
@@ -10644,431 +11113,6 @@
 			"Radius": 280.199951171875,
 			"OuterAngle": 70.0,
 			"InnerAngle": 50.0
-		},
-		{
-			"ID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "74a68a984824b4510d12589f199ad68f",
-			"Name": "EmptyActor",
-			"Transform": {
-				"Translation": {
-					"X": 17.558446884155273,
-					"Y": -45.6215705871582,
-					"Z": 1015.2496337890625
-				}
-			}
-		},
-		{
-			"ID": "7d7f95bf4604fa41d4d0d4813b242164",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "Skeleton 0",
-			"Transform": {
-				"Translation": {
-					"X": -0.5299434661865234,
-					"Y": -571.4908447265625,
-					"Z": 783.665771484375
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				},
-				"Scale": {
-					"X": 5.0,
-					"Y": 5.0,
-					"Z": 5.0
-				}
-			},
-			"StaticFlags": 0,
-			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "faa81e7a4a2faf38098fb58f8fff61e5",
-			"TypeName": "FlaxEngine.SpotLight",
-			"ParentID": "7d7f95bf4604fa41d4d0d4813b242164",
-			"Name": "SpotLight",
-			"Transform": {
-				"Translation": {
-					"X": -0.0000018399250620859675,
-					"Y": 170.1586456298828,
-					"Z": 21.046289443969727
-				},
-				"Orientation": {
-					"X": 0.9832550287246704,
-					"Y": -5.379201297728287e-7,
-					"Z": -5.379201297728287e-7,
-					"W": 0.1822354793548584
-				}
-			},
-			"StaticFlags": 0,
-			"Color": {
-				"R": 1.0,
-				"G": 0.0,
-				"B": 0.009743690490722656,
-				"A": 1.0
-			},
-			"Brightness": 101.9000015258789,
-			"Radius": 1500.0,
-			"OuterAngle": 50.0
-		},
-		{
-			"ID": "cefb81354d0b971580e54c89bfaff0d9",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "Skeleton 2",
-			"Transform": {
-				"Translation": {
-					"X": -881.5166015625,
-					"Y": 46.97822952270508,
-					"Z": -550.650390625
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			},
-			"StaticFlags": 0,
-			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
-			"AnimationGraph": "e52202a9459b0b64af0ba0a61dc4d4e8",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "9e1610f24d368bc4e1fde88ee2751578",
-			"TypeName": "FlaxEngine.AnimatedModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "Skeleton 3",
-			"Transform": {
-				"Translation": {
-					"X": 380.0451965332031,
-					"Y": 46.97822952270508,
-					"Z": 253.840087890625
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": -0.7071068286895752,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"StaticFlags": 0,
-			"SkinnedModel": "0a8fd1b44fa346ea4d731c976e599abf",
-			"AnimationGraph": "361329b54288cf55c29abd9217425b0e",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "1429f18347d9e3f1590becaecfb090d3",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_Slave_Shackles_02",
-			"Transform": {
-				"Translation": {
-					"X": -300.604736328125,
-					"Y": 78.88111877441406,
-					"Z": -754.1166381835938
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "59d9a67a4278879d5a4e5c9b0b8dedfb",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
-			"TypeName": "FlaxEngine.EmptyActor",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "Office_Lying",
-			"Transform": {
-				"Translation": {
-					"X": 509.8176574707031,
-					"Y": 51.8177490234375,
-					"Z": -398.83465576171875
-				}
-			}
-		},
-		{
-			"ID": "e38a9a7945faae0dc6974287a9e6d16e",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
-			"Name": "SM_Prop_Skeleton_Table_02",
-			"Transform": {
-				"Translation": {
-					"X": 7.399169921875,
-					"Y": -3.948314666748047,
-					"Z": -380.96368408203125
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.7071068286895752,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "9e246a3641511107c6599c9c3844b6c3",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "2590f24549839511fba016baa073fdb6",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
-			"Name": "SM_Prop_Skeleton_Table_3",
-			"Transform": {
-				"Translation": {
-					"X": 7.399169921875,
-					"Y": -3.948314666748047,
-					"Z": -70.61968994140625
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.7071068286895752,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "9e246a3641511107c6599c9c3844b6c3",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "ade5c3884725bce87738648db02f3763",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
-			"Name": "SM_Prop_Skeleton_Table_01",
-			"Transform": {
-				"Translation": {
-					"X": -17.14306640625,
-					"Y": 3.9483108520507813,
-					"Z": 105.94287109375
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.7193397879600525,
-					"Z": 0.0,
-					"W": 0.6946583986282349
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "48de68bd400bff8ca4b548a4fbab7118",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "ac7e19154e39b6dee1a588a5306a9199",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "4cba2e3f4fbed867ba3a8fa26c0ba8c3",
-			"Name": "SM_Prop_Skeleton_Table_2",
-			"Transform": {
-				"Translation": {
-					"X": 2.3446044921875,
-					"Y": 3.9483108520507813,
-					"Z": 345.640380859375
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 0.7193397879600525,
-					"Z": 0.0,
-					"W": 0.6946583986282349
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "48de68bd400bff8ca4b548a4fbab7118",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "9ea93a9749894cab8736508ca8ad9ccd",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_Slave_Wall_Sitting_01",
-			"Transform": {
-				"Translation": {
-					"X": 457.2236022949219,
-					"Y": 49.34126281738281,
-					"Z": 38.15185546875
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "d5ca2ffd427dd6f3dc79208c321c0854",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "d290626744820d4fe5405088e78dc578",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_Cage_2",
-			"Transform": {
-				"Translation": {
-					"X": 290.8218078613281,
-					"Y": 66.76095581054688,
-					"Z": -309.57379150390625
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "7a69325c4b73b4f0460af2bd8932a61c",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "e13491fa4df53c020cc7f4b53f72614c",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_2",
-			"Transform": {
-				"Translation": {
-					"X": -501.5883483886719,
-					"Y": 132.39137268066406,
-					"Z": 198.41357421875
-				},
-				"Orientation": {
-					"X": 0.7071068286895752,
-					"Y": 0.0,
-					"Z": 0.0,
-					"W": 0.7071068286895752
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "0d7138624aed508e58cd25b82cb6f668",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
-		},
-		{
-			"ID": "73e83f8d4512e17a01ca4dbb1e575ee9",
-			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "85dc388d435cc3f743e8e5b978bbfa0e",
-			"IsActive": false,
-			"Name": "SM_Prop_Skeleton_Slave_Lying_3",
-			"Transform": {
-				"Translation": {
-					"X": 68.44210052490234,
-					"Y": 51.363677978515625,
-					"Z": 255.8709716796875
-				},
-				"Orientation": {
-					"X": 0.0,
-					"Y": 1.0,
-					"Z": 0.0,
-					"W": -4.371138828673793e-8
-				}
-			},
-			"StaticFlags": 0,
-			"Model": "fab113204f7c5a1fa768e1869ffd0bc2",
-			"Buffer": {
-				"Entries": [
-					{
-						"Material": "00000000000000000000000000000000",
-						"ShadowsMode": 3,
-						"Visible": true,
-						"ReceiveDecals": true
-					}
-				]
-			}
 		}
 	]
 }

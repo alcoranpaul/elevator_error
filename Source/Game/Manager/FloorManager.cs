@@ -142,7 +142,7 @@ public class FloorManager : InstanceManagerScript
         {
             SingletonManager.Get<MessageManager>().ShowMessage("Floor is not cleaned!");
             SingletonManager.Get<AudioManager>().PlaySFXClip(_cannotProceedSound, true);
-            SingletonManager.Get<EventManager>().Publish<CameraShakeEvent>(_cannotProceedCameraShakeEvent);
+            SingletonManager.Get<EventManager>().Publish(_cannotProceedCameraShakeEvent);
             return false;
         }
 
