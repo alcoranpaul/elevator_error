@@ -9179,7 +9179,13 @@
 		"ZoomOutDuration": 0.5,
 		"CameraShakeArgument": {
 			"SpringArm": "74d9b4f44fce9c5398dae5872cbdb7db"
-		}
+		},
+		"CharacterController": "ccc3279144f0c86b927ab6b14f517dd1",
+		"BobSpeed": 10.0,
+		"BobAmount": 3.0,
+		"BobSwayAmount": 8.0,
+		"LeftFootstepSound": "9b9b474f4304fadbaef2c4aad669cd21",
+		"RightFootstepSound": "ed2714bc4e6d23c9465fc792838c313b"
 	},
 	"_movementComponentArgs": {
 		"MovementSpeed": 275.59464,
