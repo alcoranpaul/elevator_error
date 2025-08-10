@@ -6,6 +6,7 @@
 		{
 			"ID": "74a68a984824b4510d12589f199ad68f",
 			"TypeName": "FlaxEngine.Scene",
+			"Name": "Game",
 			"LightmapSettings": {
 				"IndirectLightingIntensity": 1.0,
 				"GlobalObjectsScale": 1.0,
@@ -947,7 +948,7 @@
 			"Name": "Label",
 			"Transform": {
 				"Translation": {
-					"X": -1.61419677734375,
+					"X": 51.05535888671875,
 					"Y": 120.34243774414063,
 					"Z": 0.0
 				}

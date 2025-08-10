@@ -6,6 +6,7 @@
 		{
 			"ID": "10eb1d19423a9115d0dc488cbc51ad19",
 			"TypeName": "FlaxEngine.Scene",
+			"Name": "MainMenu",
 			"LightmapSettings": {
 				"IndirectLightingIntensity": 1.0,
 				"GlobalObjectsScale": 1.0,
@@ -38,11 +39,14 @@
 			"ParentID": "8e43e4f543a7e8d8553501994a2ec982",
 			"V": {
 	"_gameScene": "74a68a984824b4510d12589f199ad68f",
+	"_donotDestroyScene": "2c81ba53436579f647b1c292e5a814e0",
 	"_playControl": "eb125d8c47e320c9658cb4bb6944ba84",
 	"_optionsControl": "6ededd934d1e71e9ed79fe93fea30e24",
 	"_quitControl": "9ff8ec3741fe20ca280f2f871d4dc00f",
 	"_optionsContainerControl": "e24c2bbf4a3956a56535719145fc822b",
-	"_optionsExitControl": "fff6e4cc47cf0820d57716b59d558335"
+	"_optionsExitControl": "fff6e4cc47cf0820d57716b59d558335",
+	"_bgmSliderControl": "55bc5b634e316f238c6112810b6789d7",
+	"_sfxSliderControl": "7a8f568c4610bd6a66178491ba7f1d92"
 }
 		},
 		{
@@ -1836,7 +1840,7 @@
 	"Maximum": 1.0,
 	"Minimum": 0.0,
 	"Direction": 0,
-	"Value": 0.5,
+	"Value": 0.0,
 	"TrackThickness": 20,
 	"ThumbSize": {
 		"X": 64.0,
@@ -3957,15 +3961,6 @@
 			},
 			"Radius": 281.0,
 			"Brightness": 2.0
-		},
-		{
-			"ID": "e60010f344d3ca56d53773b6caae0407",
-			"TypeName": "FlaxEngine.AudioSource",
-			"ParentID": "10eb1d19423a9115d0dc488cbc51ad19",
-			"Name": "galactic-cafe-ambient-loop",
-			"Clip": "73e9455543f77c2bce71c0bb5bbc4a94",
-			"Loop": true,
-			"PlayOnStart": true
 		}
 	]
 }
