@@ -27,6 +27,7 @@ public class FloorManager : InstanceManagerScript
     [ShowInEditor, Serialize] private SkyLight _skyLight;
 
     [ShowInEditor, Serialize] private AudioClip _cannotProceedSound;
+    [ShowInEditor, Serialize] private AudioClip _bgmClip;
 
     [ShowInEditor, Serialize] private CameraShakeEvent _cannotProceedCameraShakeEvent;
 
@@ -113,7 +114,9 @@ public class FloorManager : InstanceManagerScript
 
     public override void OnStart()
     {
+        SingletonManager.Get<AudioManager>().ChangeBGM(_bgmClip);
         SingletonManager.Get<MessManager>().OnFloorCleaned += OnFloorCleaned;
+
     }
 
 
