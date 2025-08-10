@@ -17,6 +17,8 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     public event Action<int> OnFloorChangeRequested;
 
+    public event Action OnAllFloorsCleaned;
+
     /// <summary>
     /// Reference to the button panel script responsible for floor change input.
     /// </summary>
@@ -31,6 +33,7 @@ public class FloorManager : InstanceManagerScript
     [ShowInEditor, Serialize] private BezierCurve<float> _anomalyCurve;
 
     [ShowInEditor, Serialize] private Actor _anomaliesActor;
+    [ShowInEditor, Serialize] private Actor _gameOverActor;
 
     /// <summary>
     /// Array holding data for each floor.
@@ -48,9 +51,10 @@ public class FloorManager : InstanceManagerScript
     /// Total number of floors in the building.
     /// Consider moving this to engine settings later.
     /// </summary>
-    private const int FLOOR_COUNT = 5;
+    [ShowInEditor, Serialize] private int _floorCount = 5;
 
     private IAnomaly[] _anomalies;
+    private bool _isAllFloorsCleaned;
 
 
 
@@ -58,7 +62,8 @@ public class FloorManager : InstanceManagerScript
     public override void OnAwake()
     {
         base.OnAwake();
-        _floors = new FloorData[FLOOR_COUNT];
+        _floors = new FloorData[_floorCount];
+
         InitializeFloors();
         GoToGroundFloor();
         _skyLight.Brightness = 3f;
@@ -76,10 +81,20 @@ public class FloorManager : InstanceManagerScript
 
         _buttonPanel.OnFloorAdvanceRequested += OnFloorAdvanceRequested;
         _buttonPanel.OnElevatorStoppedVibrating += OnElevatorStoppedVibrating;
+
+        _gameOverActor.IsActive = false;
     }
 
     private void OnElevatorStoppedVibrating()
     {
+
+        if (_isAllFloorsCleaned)
+        {
+            _skyLight.Brightness = 3f;
+            _gameOverActor.IsActive = true;
+            return;
+        }
+
         if (_currentFloor == null)
             _skyLight.Brightness = 3f;
         else
@@ -116,7 +131,7 @@ public class FloorManager : InstanceManagerScript
     /// </summary>
     private void InitializeFloors()
     {
-        for (int i = 0; i < FLOOR_COUNT; i++)
+        for (int i = 0; i < _floorCount; i++)
         {
             FloorData floor = new();
             _floors[i] = floor;
@@ -147,7 +162,6 @@ public class FloorManager : InstanceManagerScript
         }
 
         bool hasAnomaly = _currentFloor.HasAnomaly;
-        Debug.Log($"Floor has anomaly: {hasAnomaly}, Direction: {direction}");
 
         bool isGoingDown = direction == ButtonPanel.Direction.Down;
         bool isGoingUp = direction == ButtonPanel.Direction.Up;
@@ -186,7 +200,9 @@ public class FloorManager : InstanceManagerScript
 
         if (nextIndex >= _floors.Length)
         {
-            Debug.Log("All floors have been cleaned!");
+            GoToGroundFloor();
+            _isAllFloorsCleaned = true;
+            OnAllFloorsCleaned?.Invoke();
             return;
         }
 
@@ -198,7 +214,6 @@ public class FloorManager : InstanceManagerScript
         float anomalyChance = chanceValue;
         _currentFloor.HasAnomaly = Random.Shared.NextSingle() < anomalyChance;
 
-        Debug.Log($"Floor {nextIndex} has anomaly: {_currentFloor.HasAnomaly}");
 
     }
 
