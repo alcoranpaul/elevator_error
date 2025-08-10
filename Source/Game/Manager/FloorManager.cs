@@ -149,7 +149,8 @@ public class FloorManager : InstanceManagerScript
     /// <returns>True if the floor was changed; false if not cleaned.</returns>
     private bool OnFloorAdvanceRequested(ButtonPanel.Direction direction)
     {
-        if (_currentFloor == null) // Ground floor start
+
+        if (_currentFloor == null)
         {
             GoToNextFloor();
             OnFloorChangeRequested?.Invoke(1);
@@ -215,7 +216,9 @@ public class FloorManager : InstanceManagerScript
         // Calculate anomaly chance
         _anomalyCurve.Evaluate(out float chanceValue, nextIndex);
         float anomalyChance = chanceValue;
-        _currentFloor.HasAnomaly = Random.Shared.NextSingle() < anomalyChance;
+        float randValue = Random.Shared.NextSingle();
+
+        _currentFloor.HasAnomaly = randValue < anomalyChance;
 
 
     }
