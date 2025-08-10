@@ -7,6 +7,13 @@
 			"ID": "74a68a984824b4510d12589f199ad68f",
 			"TypeName": "FlaxEngine.Scene",
 			"Name": "Game",
+			"Lightmaps": [
+				{
+					"Lightmap0": "34eecbcf4bf0fa662e71a2ae7b8c41ec",
+					"Lightmap1": "e253358949cfab083bcdd58ee0b8304e",
+					"Lightmap2": "2e0e0f454be4965dcc56a0b804ba4a4f"
+				}
+			],
 			"LightmapSettings": {
 				"IndirectLightingIntensity": 1.0,
 				"GlobalObjectsScale": 1.0,
@@ -335,7 +342,7 @@
 	},
 	"BackgroundBrush": null,
 	"Enabled": true,
-	"Visible": true,
+	"Visible": false,
 	"AutoFocus": true
 }
 		},
@@ -2592,8 +2599,7 @@
 			"ParentID": "28553d634087c67c711ebd96080482aa",
 			"IsActive": false,
 			"Name": "EnvironmentProbe",
-			"Brightness": 0.0,
-			"ProbeID": "455d3ec64ec0bab4a168c78980c2cfeb"
+			"Brightness": 0.0
 		},
 		{
 			"ID": "de77f8454717e0266582d59246ad7a00",
@@ -2631,7 +2637,8 @@
 				}
 			},
 			"Radius": 281.0,
-			"Brightness": 2.0
+			"Brightness": 2.0,
+			"ProbeID": "8c96005a4fc8aa93e39dbf9464f38dfb"
 		},
 		{
 			"ID": "b82fdced42090079fed2f9ac98b166d3",
@@ -12756,6 +12763,17 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"LightmapIndex": 0,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.0029296875
+				},
+				"Size": {
+					"X": 0.03515625,
+					"Y": 0.03515625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{
@@ -13484,6 +13502,17 @@
 				}
 			},
 			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"LightmapIndex": 0,
+			"LightmapArea": {
+				"Location": {
+					"X": 0.0029296875,
+					"Y": 0.041015625
+				},
+				"Size": {
+					"X": 0.00390625,
+					"Y": 0.00390625
+				}
+			},
 			"Buffer": {
 				"Entries": [
 					{

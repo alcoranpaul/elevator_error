@@ -2580,7 +2580,7 @@
 			"Transform": {
 				"Translation": {
 					"X": 1361.0,
-					"Y": 870.0,
+					"Y": 828.0,
 					"Z": 0.0
 				}
 			},
@@ -2613,8 +2613,8 @@
 	"Offsets": {
 		"Left": -559.0,
 		"Right": 500.0,
-		"Top": -210.0,
-		"Bottom": 170.0
+		"Top": -252.0,
+		"Bottom": 212.0
 	},
 	"Scale": {
 		"X": 1.0,
@@ -2691,8 +2691,8 @@
 	"AutoHeight": false,
 	"AutoFitText": true,
 	"AutoFitTextRange": {
-		"X": 0.1,
-		"Y": 100.0
+		"X": 0.25,
+		"Y": 1.0
 	},
 	"ClipChildren": true,
 	"CullChildren": true,
@@ -2786,7 +2786,7 @@
 	"AutoFitText": true,
 	"AutoFitTextRange": {
 		"X": 0.1,
-		"Y": 0.15
+		"Y": 0.18
 	},
 	"ClipChildren": true,
 	"CullChildren": true,
@@ -2880,7 +2880,7 @@
 	"AutoFitText": true,
 	"AutoFitTextRange": {
 		"X": 0.1,
-		"Y": 0.15
+		"Y": 0.18
 	},
 	"ClipChildren": true,
 	"CullChildren": true,
@@ -2974,7 +2974,7 @@
 	"AutoFitText": true,
 	"AutoFitTextRange": {
 		"X": 0.1,
-		"Y": 0.15
+		"Y": 0.18
 	},
 	"ClipChildren": true,
 	"CullChildren": true,
@@ -2990,6 +2990,100 @@
 		"Left": 2.0,
 		"Right": 496.0,
 		"Top": 128.0,
+		"Bottom": 40.0
+	},
+	"Scale": {
+		"X": 1.0,
+		"Y": 1.0
+	},
+	"Pivot": {
+		"X": 0.5,
+		"Y": 0.5
+	},
+	"Shear": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Rotation": 0.0,
+	"BackgroundColor": {
+		"R": 0.0,
+		"G": 0.0,
+		"B": 0.0,
+		"A": 0.0
+	},
+	"BackgroundBrush": null,
+	"Enabled": true,
+	"Visible": true,
+	"AutoFocus": false
+}
+		},
+		{
+			"ID": "91e8ec424a0aedac6d0af69a10866004",
+			"TypeName": "FlaxEngine.UIControl",
+			"ParentID": "6b55f54242d1af96888614b4ebfef467",
+			"Name": "Label 3",
+			"Transform": {
+				"Translation": {
+					"X": 2.0,
+					"Y": 170.0,
+					"Z": 0.0
+				}
+			},
+			"Control": "FlaxEngine.GUI.Label",
+			"Data": {
+	"Text": "ESC - Options",
+	"CaseOption": 0,
+	"Bold": false,
+	"Italic": false,
+	"TextColor": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"TextColorHighlighted": {
+		"R": 1.0,
+		"G": 1.0,
+		"B": 1.0,
+		"A": 1.0
+	},
+	"HorizontalAlignment": 0,
+	"VerticalAlignment": 1,
+	"Wrapping": 0,
+	"BaseLinesGapScale": 1.0,
+	"Font": {
+		"Font": "988ae1d242f72fefdf32c3a2c42425d2",
+		"Size": 150.0
+	},
+	"Material": null,
+	"Margin": {
+		"Left": 0.0,
+		"Right": 0.0,
+		"Top": 0.0,
+		"Bottom": 0.0
+	},
+	"ClipText": false,
+	"AutoWidth": false,
+	"AutoHeight": false,
+	"AutoFitText": true,
+	"AutoFitTextRange": {
+		"X": 0.1,
+		"Y": 0.18
+	},
+	"ClipChildren": true,
+	"CullChildren": true,
+	"AnchorMin": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"AnchorMax": {
+		"X": 0.0,
+		"Y": 0.0
+	},
+	"Offsets": {
+		"Left": 2.0,
+		"Right": 496.0,
+		"Top": 170.0,
 		"Bottom": 40.0
 	},
 	"Scale": {
@@ -4368,8 +4462,7 @@
 			"ParentID": "a4d99c694f5eb9032fc74daccdc80aab",
 			"IsActive": false,
 			"Name": "EnvironmentProbe",
-			"Brightness": 0.0,
-			"ProbeID": "455d3ec64ec0bab4a168c78980c2cfeb"
+			"Brightness": 0.0
 		},
 		{
 			"ID": "2919c6e0499cc81df94d92abe75571a4",
@@ -4407,7 +4500,8 @@
 				}
 			},
 			"Radius": 281.0,
-			"Brightness": 2.0
+			"Brightness": 2.0,
+			"ProbeID": "8690797c41089022345414a029e410fd"
 		}
 	]
 }
